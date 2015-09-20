@@ -1,10 +1,10 @@
 set echo on
-set lines 60
+set lines 120
 set pages 1000
 
-spool list_busy_clusters
+spool list_busy_clusters.tsv
 
-    select distinct b.composite_target_type, b.composite_target_name, a.target_name
+    select distinct b.composite_target_type || '|' ||  b.composite_target_name || '|' ||  a.target_name
       from mgmt$metric_hourly a,
            mgmt_target_memberships b
      where b.composite_target_type = 'cluster'
@@ -17,3 +17,4 @@ spool list_busy_clusters
   order by 3,1,2;
 
 spool off
+

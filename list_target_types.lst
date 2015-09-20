@@ -1,0 +1,43 @@
+SQL> 
+SQL> --select distinct target_type from  mgmt$metric_current order by 1;
+SQL> 
+SQL> select distinct target_type
+  2  from mgmt$target
+  3  order by 1;
+
+TARGET_TYPE                                                                     
+----------------------------------------------------------------                
+cloud                                                                           
+cluster                                                                         
+composite                                                                       
+has                                                                             
+host                                                                            
+j2ee_application                                                                
+metadata_repository                                                             
+oracle_apache                                                                   
+oracle_beacon                                                                   
+oracle_cloud                                                                    
+oracle_database                                                                 
+oracle_dbsys                                                                    
+oracle_em_service                                                               
+oracle_emd                                                                      
+oracle_emrep                                                                    
+oracle_emsvrs_sys                                                               
+oracle_home                                                                     
+oracle_ias_farm                                                                 
+oracle_listener                                                                 
+oracle_oms                                                                      
+oracle_oms_console                                                              
+oracle_oms_pbs                                                                  
+oracle_vm_cloud                                                                 
+osm_cluster                                                                     
+osm_instance                                                                    
+rac_database                                                                    
+weblogic_domain                                                                 
+weblogic_j2eeserver                                                             
+
+28 rows selected.
+
+SQL> 
+SQL> 
+SQL> spool off

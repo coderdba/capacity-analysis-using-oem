@@ -3,13 +3,13 @@ spool list_daily_metrics_of_busy_cluser_databases2.tsv
 set pages 1000
 set lines 150
 
-prompt composite_target_name, target_name, metric_name, metric_column, date, average, min, max, std_deviation
+prompt composite_target_name, host_name, target_name, metric_name, metric_column, date, average, min, max, std_deviation
 select
-replace(upper(b.composite_target_name),'RCL','RAC')
+upper(b.composite_target_name)
 || '|' ||
-replace(upper(c.host_name), 'D','Z')
+upper(c.host_name)
 || '|' ||
-replace(upper(a.target_name), 'R', 'RAC')
+upper(a.target_name)
 || '|' ||
 a.metric_name
 || '|' ||

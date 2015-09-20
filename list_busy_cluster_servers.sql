@@ -3,7 +3,7 @@ set lines 120
 set pages 1000
 
 -- Clusters and servers (with at least one server in the cluster beyond CPU threshold in the last few days)
-spool list_busy_clusters.tsv
+spool list_busy_cluster_servers.tsv
 
     select distinct b.composite_target_type || '|' ||  b.composite_target_name || '|' ||  a.target_name
       from mgmt$metric_hourly a,

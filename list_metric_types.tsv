@@ -1,0 +1,1553 @@
+SQL> 
+SQL> set lines 500
+SQL> 
+SQL> select distinct target_type || '|' || metric_name || '|' || metric_label || '|' || column_label
+  2  from  mgmt$metric_current
+  3  order by 1;
+
+TARGET_TYPE||'|'||METRIC_NAME||'|'||METRIC_LABEL||'|'||COLUMN_LABEL
+------------------------------------------------------------------------------------------------
+casm_diskgroup_component|DiskGroup_Target_Component|Disk Group Target Component|Disk Count   
+cluster|CRSAlert|Clusterware Alert Log|Alert Log Name
+cluster|CRSAlert|Clusterware Alert Log|Clusterware Service Alert Log Error 
+cluster|CRSAlert|Clusterware Alert Log|Node Configuration Alert Log Error  
+cluster|CRSAlert|Clusterware Alert Log|OCR Alert Log Error   
+cluster|CRSAlert|Clusterware Alert Log|Voting Disk Alert Log Error 
+cluster|CRSStatus|Clusterware Status|Cluster Verification Output 
+cluster|CRSStatus|Clusterware Status|Clusterware Status  
+cluster|priv_intrcon|Private Interconnect|Private Interconnect Transfer Rate (MB/Sec)   
+cluster|resource_status|Resource State|State Change  
+composite|Summary Metrics|Summary Metrics|Average: Database Instance Average Active Sessions 
+composite|Summary Metrics|Summary Metrics|Average: Host CPU Utilization (%)
+composite|Summary Metrics|Summary Metrics|Maximum: Database Instance Average Active Sessions 
+composite|Summary Metrics|Summary Metrics|Maximum: Host CPU Utilization (%)
+composite|Summary Metrics|Summary Metrics|Minimum: Database Instance Average Active Sessions 
+composite|Summary Metrics|Summary Metrics|Minimum: Host CPU Utilization (%)
+composite|Summary Metrics|Summary Metrics|Std. Deviation: Database Instance Average Active Sessions  
+composite|Summary Metrics|Summary Metrics|Std. Deviation: Host CPU Utilization (%) 
+composite|Summary Metrics|Summary Metrics|Sum: Database Instance Average Active Sessions
+composite|Summary Metrics|Summary Metrics|Sum: Host CPU Utilization (%)
+has|CRSAlert|Oracle High Availability Service Alert Log|Alert Log Name 
+has|CRSAlert|Oracle High Availability Service Alert Log|CRS Resource Alert Log Error
+has|CRSAlert|Oracle High Availability Service Alert Log|Node Configuration Alert Log Error   
+has|CRSAlert|Oracle High Availability Service Alert Log|OCR Alert Log Error
+has|CRSAlert|Oracle High Availability Service Alert Log|OLR Alert Log Error
+has|CRSAlert|Oracle High Availability Service Alert Log|Oracle High Availability Service Alert Log Error 
+has|Response|Response|Oracle High Availability Service Verification Output 
+has|Response|Response|Status
+host|DiskActivitySummary|Disk Activity Summary|Max Average Disk I/O Service Time (ms) amongst all disks  
+host|DiskActivitySummary|Disk Activity Summary|Max Disk I/O (per sec) made by a single disk  
+host|DiskActivitySummary|Disk Activity Summary|Total Disk I/O made across all disks (per second) 
+host|DiskActivity|Disk Activity|Average Disk I/O Service Time (ms) 
+host|DiskActivity|Disk Activity|Average Disk I/O Wait Time (ms)  
+host|DiskActivity|Disk Activity|Average Outstanding Disk I/O Requests  
+host|DiskActivity|Disk Activity|Average Run Time (ms)
+host|DiskActivity|Disk Activity|Bulk IO Ticks   
+host|DiskActivity|Disk Activity|Difference in Number of Reads
+host|DiskActivity|Disk Activity|Difference in Number of Writes   
+host|DiskActivity|Disk Activity|Disk Block Writes (per second)   
+host|DiskActivity|Disk Activity|Disk Blocks Transferred (per second)   
+host|DiskActivity|Disk Activity|Disk Device Busy (%) 
+host|DiskActivity|Disk Activity|Disk Reads (per second)  
+host|DiskActivity|Disk Activity|Disk Writes (per second) 
+host|DiskActivity|Disk Activity|Transfers (per second)   
+host|DiskErrors|Disk Device Errors|Hard Errors  
+host|DiskErrors|Disk Device Errors|Soft Errors  
+host|DiskErrors|Disk Device Errors|Total
+host|DiskErrors|Disk Device Errors|Transport Errors  
+host|FileMonitoring|File and Directory Monitoring|File or Directory Attribute Not Found 
+host|FileMonitoring|File and Directory Monitoring|File or Directory Permissions 
+host|FileMonitoring|File and Directory Monitoring|File or Directory Size (MB)
+host|FileMonitoring|File and Directory Monitoring|File or Directory Size Change Rate (KB/minute) 
+host|Filesystems|Filesystems|Filesystem 
+host|Filesystems|Filesystems|Filesystem Size (MB)    
+host|Filesystems|Filesystems|Filesystem Space Available (%)  
+host|Filesystems|Filesystems|Filesystem Space Available (MB) 
+host|HostStorageSupport|Host Storage Support|Supported   
+host|LPAR Performance on AIX|LPAR Performance on AIX|Entitlement consumed (%)
+host|LPAR Performance on AIX|LPAR Performance on AIX|Idle %  
+host|LPAR Performance on AIX|LPAR Performance on AIX|Physical Processor Consumed
+host|LPAR Performance on AIX|LPAR Performance on AIX|Sys %   
+host|LPAR Performance on AIX|LPAR Performance on AIX|User %  
+host|LPAR Performance on AIX|LPAR Performance on AIX|Wait %  
+host|LPAR Statistics on AIX|LPAR Statistics on AIX|Active CPUs in Pool 
+host|LPAR Statistics on AIX|LPAR Statistics on AIX|Active Physical CPUs in system  
+host|LPAR Statistics on AIX|LPAR Statistics on AIX|Capacity Increment  
+host|LPAR Statistics on AIX|LPAR Statistics on AIX|Entitled Capacity   
+host|LPAR Statistics on AIX|LPAR Statistics on AIX|LPAR Partition Mode 
+host|LPAR Statistics on AIX|LPAR Statistics on AIX|LPAR Partition Type 
+host|LPAR Statistics on AIX|LPAR Statistics on AIX|Maximum Capacity
+host|LPAR Statistics on AIX|LPAR Statistics on AIX|Maximum Memory (MB) 
+host|LPAR Statistics on AIX|LPAR Statistics on AIX|Maximum Physical CPUs in system 
+host|LPAR Statistics on AIX|LPAR Statistics on AIX|Maximum Virtual CPUs
+host|LPAR Statistics on AIX|LPAR Statistics on AIX|Minimum Capacity
+host|LPAR Statistics on AIX|LPAR Statistics on AIX|Minimum Memory (MB) 
+host|LPAR Statistics on AIX|LPAR Statistics on AIX|Minimum Virtual VCPUs   
+host|LPAR Statistics on AIX|LPAR Statistics on AIX|Online Memory (MB)  
+host|LPAR Statistics on AIX|LPAR Statistics on AIX|Online Virtual CPUs 
+host|LPAR Statistics on AIX|LPAR Statistics on AIX|Partition Group-ID  
+host|LPAR Statistics on AIX|LPAR Statistics on AIX|Partition Name
+host|LPAR Statistics on AIX|LPAR Statistics on AIX|Partition Number
+host|LPAR Statistics on AIX|LPAR Statistics on AIX|Physical CPU Percentage 
+host|LPAR Statistics on AIX|LPAR Statistics on AIX|Shared Pool ID
+host|LPAR Statistics on AIX|LPAR Statistics on AIX|Simultaneous Multithreading (SMT)
+host|LPAR Statistics on AIX|LPAR Statistics on AIX|Unallocated Capacity
+host|LPAR Statistics on AIX|LPAR Statistics on AIX|Unallocated Weight  
+host|LPAR Statistics on AIX|LPAR Statistics on AIX|Variable Weight Capacity
+host|Load|Load|Active Logical Memory, Kilobytes 
+host|Load|Load|Active Memory, Kilobytes 
+host|Load|Load|CPU Utilization (%)
+host|Load|Load|CPU in I/O Wait (%)
+host|Load|Load|CPU in System Mode (%) 
+host|Load|Load|CPU in User Mode (%)   
+host|Load|Load|Free Memory (%)
+host|Load|Load|Logical Free Memory (%)
+host|Load|Load|Memory Page Scan Rate (per second)    
+host|Load|Load|Memory Utilization (%) 
+host|Load|Load|Run Queue Length (1 minute average,per core)  
+host|Load|Load|Run Queue Length (15 minute average,per core) 
+host|Load|Load|Run Queue Length (5 minute average,per core)  
+host|Load|Load|Swap Utilization (%)   
+host|Load|Load|Total Processes
+host|Load|Load|Total Users  
+host|Load|Load|Used Logical Memory (%)
+host|LogFileMonitor|Log File Monitor|Log File Pattern Matched Line Count   
+host|ME$CHK_PAM_CONFIG|ME$CHK_PAM_CONFIG|File Exist  
+host|ME$CHK_PAM_CONFIG|ME$CHK_PAM_CONFIG|Line Count  
+host|ME$CHK_PAM_CONFIG|ME$CHK_PAM_CONFIG|Platform    
+host|ME$CLUSTER_ALERT_SETUP|CLUSTER_ALERT_SETUP|HOSTNAME 
+host|ME$CLUSTER_ALERT|CLUSTER_ALERT|do_maint_files_RAC   
+host|ME$CLUSTER_ALERT|CLUSTER_ALERT|inf_rac_crs_alerts_v3
+host|ME$CLUSTER_ALERT|CLUSTER_ALERT|trim_alert_log_rac   
+host|ME$CLUSTER_ALERT|CLUSTER_ALERT|trim_listener_log
+host|ME$Collect_Oratab_Entries|ME$Collect_Oratab_Entries|Start_Flag
+host|ME$GG_LAG_ODS_PERF_RIODS01|Goldengate Lag check with script saved in OEM repository|Lag Seconds 
+host|ME$GG_Lag_OMS_Perf_TTC_Node3|GG Lag for replicat RIODS01|Lag Seconds  
+host|ME$GG_Lag_OMS_Perf_TTC_Node3|GG Lag for replicat RIODS01|Severity Flag
+host|ME$Met_ext_test_ver2_z001n1k|metric extension test|created date   
+host|ME$ORACLE_ULIMIT|ORACLE_ULIMIT|HOSTNAME
+host|ME$ORAPERM_CHECK|ORAPERM_CHECK|COMMENTS
+host|ME$ORAUSER_CHECK|ORAUSER_CHECK|GROUPID
+host|ME$ORAUSER_CHECK|ORAUSER_CHECK|ORACLE_USER_HOME 
+host|ME$ORAUSER_CHECK|ORAUSER_CHECK|USERID 
+host|ME$ORA_FILES|ORA_FILES|HOSTNAME  
+host|ME$PERM_CHECK|ME$PERM_CHECK|COMMENTS  
+host|ME$PERM_CHECK|ME$PERM_CHECK|GROUP
+host|ME$PERM_CHECK|ME$PERM_CHECK|OWNER
+host|ME$PERM_CHECK|ME$PERM_CHECK|PERMISSION
+host|ME$PMON|ME$pmon|Host_Name
+host|ME$Testing_GG_Lag_OEMGenericScript_gowrish_deployable|GG Lag - Generic Single Script Gowrish Testing |Lag Seconds  
+host|ME$check_Cron_Setup|ME$check_Cron_Setup|Script_Name 
+host|ME$check_pmon|ME$check_pmon|Host_Name 
+host|NetworkSummary|Network Interfaces Summary|All Network Interfaces Combined Utilization (%)   
+host|NetworkSummary|Network Interfaces Summary|All Network Interfaces Read Rate (MB/sec)
+host|NetworkSummary|Network Interfaces Summary|All Network Interfaces Read Utilization (%)   
+host|NetworkSummary|Network Interfaces Summary|All Network Interfaces Total I/O Rate (MB/sec)
+host|NetworkSummary|Network Interfaces Summary|All Network Interfaces Write Rate (MB/sec)    
+host|NetworkSummary|Network Interfaces Summary|All Network Interfaces Write Utilization (%)  
+host|Network|Network Interfaces|Network Interface Collisions (%) 
+host|Network|Network Interfaces|Network Interface Combined Utilization (%) 
+host|Network|Network Interfaces|Network Interface Input Errors (%) 
+host|Network|Network Interfaces|Network Interface Output Errors (%)
+host|Network|Network Interfaces|Network Interface Read (MB/s)
+host|Network|Network Interfaces|Network Interface Read Utilization (%) 
+host|Network|Network Interfaces|Network Interface Total Error Rate (%) 
+host|Network|Network Interfaces|Network Interface Total I/O Rate (MB/sec)  
+host|Network|Network Interfaces|Network Interface Write (MB/s)   
+host|Network|Network Interfaces|Network Interface Write Utilization (%)
+host|PagingActivity|Paging Activity|Active Pages
+host|PagingActivity|Paging Activity|Address Translation Page Faults (per second)
+host|PagingActivity|Paging Activity|Page Faults from Software Lock Requests
+host|PagingActivity|Paging Activity|Page-in Requests (per second)
+host|PagingActivity|Paging Activity|Page-out Requests (per second) 
+host|PagingActivity|Paging Activity|Pages Paged-in (per second)  
+host|PagingActivity|Paging Activity|Pages Paged-out (per second) 
+host|PagingActivity|Paging Activity|Pages Put on Freelist by Page Stealing Daemon (per second)   
+host|PagingActivity|Paging Activity|Pages Scanned by Page Stealing Daemon (per second)  
+host|PagingActivity|Paging Activity|igets with Page Flushes(%)   
+host|ProgramResourceUtilization|Program Resource Utilization|Program's Max CPU Time Accumulated (Minutes)
+host|ProgramResourceUtilization|Program Resource Utilization|Program's Max CPU Utilization (%)   
+host|ProgramResourceUtilization|Program Resource Utilization|Program's Max Process Count
+host|ProgramResourceUtilization|Program Resource Utilization|Program's Max Resident Memory (MB)  
+host|ProgramResourceUtilization|Program Resource Utilization|Program's Min Process Count
+host|ProgramResourceUtilization|Program Resource Utilization|Program's Total CPU Time Accumulated (Minutes)
+host|ProgramResourceUtilization|Program Resource Utilization|Program's Total CPU Utilization (%) 
+host|Swap_Area_Status|Swap Area Status|Swap Free
+host|Swap_Area_Status|Swap Area Status|Swap Size
+host|TotalDiskUsage|Total Disk Usage|Total Disk Available (%) (across all local filesystems) 
+host|TotalDiskUsage|Total Disk Usage|Total Disk Size (across all local filesystems in MB)    
+host|TotalDiskUsage|Total Disk Usage|Total Disk Space Available (across all local filesystems in MB) 
+host|TotalDiskUsage|Total Disk Usage|Total Disk Space Utilized (across all local filesystems in MB)  
+host|TotalDiskUsage|Total Disk Usage|Total Disk Utilized (%) (across all local filesystems)  
+host|proc_zombie|Zombie Processes|% of Processes in Zombie State 
+host|proc_zombie|Zombie Processes|Processes in Zombie State (%)  
+j2ee_application|Response|Response|UpDown Status
+j2ee_application|adfc_taskflow_request_proc_time|ADFC Taskflow request processing time (ms)|Average Request Processing Time (ms) 
+j2ee_application|adfc_taskflow_split|ADFC Taskflow Metrics|Active Taskflows (per minute)
+j2ee_application|adfc_taskflow_split|ADFC Taskflow Metrics|Entered Taskflows (per minute)    
+j2ee_application|adfc_taskflow_split|ADFC Taskflow Metrics|Invoked Taskflows (per minute)    
+j2ee_application|adfc_taskflow_split|ADFC Taskflow Metrics|Taskflow Invoke time (ms)
+j2ee_application|ampool|ADF Application Module Pools|Activations (per minute)
+j2ee_application|ampool|ADF Application Module Pools|Active Instances  
+j2ee_application|ampool|ADF Application Module Pools|Available Instances   
+j2ee_application|ampool|ADF Application Module Pools|Average Creation Time (ms) 
+j2ee_application|ampool|ADF Application Module Pools|Instances Created (per minute)
+j2ee_application|ampool|ADF Application Module Pools|Instances Removed (per minute)
+j2ee_application|ampool|ADF Application Module Pools|Passivations (per minute)
+j2ee_application|ampool|ADF Application Module Pools|Pool Check Out Failures (per minute)    
+j2ee_application|ampool|ADF Application Module Pools|Pool Check Outs (per minute)  
+j2ee_application|ampool|ADF Application Module Pools|Pool check Ins (per minute)
+j2ee_application|ampool|ADF Application Module Pools|Referenced Modules Recycled (per minute)
+j2ee_application|ampool|ADF Application Module Pools|Referenced Modules Reused (per minute)  
+j2ee_application|ampool|ADF Application Module Pools|Requests (per minute) 
+j2ee_application|ampool|ADF Application Module Pools|Unreferenced Modules Recycled (per minute)  
+j2ee_application|deployment_app_ejb_cache|Application EJB Cache Metrics|Bean Activations (per minute)
+j2ee_application|deployment_app_ejb_cache|Application EJB Cache Metrics|Cache Accesses (per minute)  
+j2ee_application|deployment_app_ejb_cache|Application EJB Cache Metrics|Cache Hits (%)  
+j2ee_application|deployment_app_ejb_cache|Application EJB Cache Metrics|Cache Misses (per minute)
+j2ee_application|deployment_app_ejb_cache|Application EJB Cache Metrics|Cache Passivations (per minute)  
+j2ee_application|deployment_app_ejb_cache|Application EJB Cache Metrics|Cached Beans
+j2ee_application|deployment_app_ejb_pool|Application EJB Pool Metrics|Available Beans   
+j2ee_application|deployment_app_ejb_pool|Application EJB Pool Metrics|Bean Access Failures (per minute)  
+j2ee_application|deployment_app_ejb_pool|Application EJB Pool Metrics|Bean Accesses (per minute) 
+j2ee_application|deployment_app_ejb_pool|Application EJB Pool Metrics|Bean Destroys (per minute) 
+j2ee_application|deployment_app_ejb_pool|Application EJB Pool Metrics|Beans in Use 
+j2ee_application|deployment_app_ejb_pool|Application EJB Pool Metrics|Successful Bean Accesses (%)   
+j2ee_application|deployment_app_ejb_transaction|Application EJB Transaction Metrics|Bean Transaction Commits (%)   
+j2ee_application|deployment_app_ejb_transaction|Application EJB Transaction Metrics|Bean Transaction Commits (per minute)    
+j2ee_application|deployment_app_ejb_transaction|Application EJB Transaction Metrics|Bean Transaction Rollbacks (per minute)  
+j2ee_application|deployment_app_ejb_transaction|Application EJB Transaction Metrics|Bean Transaction Timeouts (per minute)   
+j2ee_application|deployment_app_level_work_manager|Deployment Application Level Work Manager Metrics|Work Manager Pending Requests   
+j2ee_application|deployment_app_level_work_manager|Deployment Application Level Work Manager Metrics|Work Manager Requests (per minute)  
+j2ee_application|deployment_app_level_work_manager|Deployment Application Level Work Manager Metrics|Work Manager Stuck Threads  
+j2ee_application|deployment_app_mdb|Application Message Driven EJB Metrics|MDB Messages (per minute) 
+j2ee_application|deployment_app_mdb|Application Message Driven EJB Metrics|MDB Suspensions (per minute)  
+j2ee_application|deployment_app_module|Deployment Module Metrics By Application|Active Sessions  
+j2ee_application|deployment_app_servlet_jsp|Servlet/JSP Metrics By Application|Reloads (per minute)  
+j2ee_application|deployment_app_servlet_jsp|Servlet/JSP Metrics By Application|Request Processing Time (ms)
+j2ee_application|deployment_app_servlet_jsp|Servlet/JSP Metrics By Application|Requests (per minute) 
+j2ee_application|deployment_ejb_pool|EJB Pool Metrics|Available Beans  
+j2ee_application|deployment_ejb_pool|EJB Pool Metrics|Bean Access Failures (per minute) 
+j2ee_application|deployment_ejb_pool|EJB Pool Metrics|Bean Accesses (per minute)
+j2ee_application|deployment_ejb_pool|EJB Pool Metrics|Bean Destroys (per minute)
+j2ee_application|deployment_ejb_pool|EJB Pool Metrics|Beans in Use 
+j2ee_application|deployment_ejb_pool|EJB Pool Metrics|Successful Bean Accesses (%) 
+j2ee_application|deployment_ejb_transaction|EJB Transaction Metrics|Bean Transaction Commits (%) 
+j2ee_application|deployment_ejb_transaction|EJB Transaction Metrics|Bean Transaction Commits (per minute)
+j2ee_application|deployment_ejb_transaction|EJB Transaction Metrics|Bean Transaction Rollbacks (per minute)
+j2ee_application|deployment_ejb_transaction|EJB Transaction Metrics|Bean Transaction Timeouts (per minute) 
+j2ee_application|deployment_module_ejb_pool|Module EJB Pool Metrics|Available Beans
+j2ee_application|deployment_module_ejb_pool|Module EJB Pool Metrics|Bean Access Failures (per minute)
+j2ee_application|deployment_module_ejb_pool|Module EJB Pool Metrics|Bean Accesses (per minute)   
+j2ee_application|deployment_module_ejb_pool|Module EJB Pool Metrics|Bean Destroys (per minute)   
+j2ee_application|deployment_module_ejb_pool|Module EJB Pool Metrics|Beans in Use
+j2ee_application|deployment_module_ejb_pool|Module EJB Pool Metrics|Successful Bean Accesses (%) 
+j2ee_application|deployment_module_ejb_transaction|Module EJB Transaction Metrics|Bean Transaction Commits (%) 
+j2ee_application|deployment_module_ejb_transaction|Module EJB Transaction Metrics|Bean Transaction Commits (per minute) 
+j2ee_application|deployment_module_ejb_transaction|Module EJB Transaction Metrics|Bean Transaction Rollbacks (per minute)    
+j2ee_application|deployment_module_ejb_transaction|Module EJB Transaction Metrics|Bean Transaction Timeouts (per minute)
+j2ee_application|deployment_module_servlet_jsp|Servlet/JSP Metrics By Module|Reloads (per minute)
+j2ee_application|deployment_module_servlet_jsp|Servlet/JSP Metrics By Module|Request Processing Time (ms)
+j2ee_application|deployment_module_servlet_jsp|Servlet/JSP Metrics By Module|Requests (per minute)   
+j2ee_application|deployment_module|Deployment Module Metrics|Active Sessions 
+j2ee_application|deployment_servlet_jsp_delta|Deployment Servlet/JSP Delta Metrics|Number Executions for the Servlet/JSP During the Last Period
+j2ee_application|deployment_servlet_jsp_delta|Deployment Servlet/JSP Delta Metrics|Time Spent Executing the Servlet/JSP During the Last Period (sec
+j2ee_application|deployment_servlet_jsp|Servlet/JSP Metrics|Reloads (per minute)
+j2ee_application|deployment_servlet_jsp|Servlet/JSP Metrics|Request Processing Time (ms)
+j2ee_application|deployment_servlet_jsp|Servlet/JSP Metrics|Requests (per minute)  
+j2ee_application|deployment_work_manager|Deployment Work Manager Metrics|Work Manager Pending Requests   
+j2ee_application|deployment_work_manager|Deployment Work Manager Metrics|Work Manager Requests (per minute)
+j2ee_application|deployment_work_manager|Deployment Work Manager Metrics|Work Manager Stuck Threads  
+j2ee_application|j2ee_app_jee_ws_port_properties|j2ee_app_jee_ws_port_properties|ImplementationType  
+j2ee_application|j2ee_app_jee_ws_port_properties|j2ee_app_jee_ws_port_properties|TransportProtocolType   
+j2ee_application|j2ee_app_jee_ws_port_properties|j2ee_app_jee_ws_port_properties|URI
+j2ee_application|j2ee_app_jrf_ws_operation|Oracle Web Service Operation Metrics|Oracle WS Operation - Avg Invocation Time per interval(ms) 
+j2ee_application|j2ee_app_jrf_ws_operation|Oracle Web Service Operation Metrics|Oracle WS Operation - Fault Count  
+j2ee_application|j2ee_app_jrf_ws_operation|Oracle Web Service Operation Metrics|Oracle WS Operation - Fault Count Delta 
+j2ee_application|j2ee_app_jrf_ws_operation|Oracle Web Service Operation Metrics|Oracle WS Operation - Invocation Count  
+j2ee_application|j2ee_app_jrf_ws_operation|Oracle Web Service Operation Metrics|Oracle WS Operation - Invocation Count Delta 
+j2ee_application|j2ee_app_jrf_ws_operation|Oracle Web Service Operation Metrics|Oracle WS Operation - Response Count 
+j2ee_application|j2ee_app_jrf_ws_operation|Oracle Web Service Operation Metrics|Oracle WS Operation - Response Count Delta   
+j2ee_application|j2ee_app_jrf_ws_operation|Oracle Web Service Operation Metrics|Oracle WS Operation - Total Invocation Time Delta(ms)
+j2ee_application|j2ee_app_jrf_ws_operation|Oracle Web Service Operation Metrics|Oracle WS Operation - Total Invocation Time(ms)  
+j2ee_application|j2ee_app_jrf_ws_port_properties|Oracle Web Service Endpoint Properties|Maximum Request Size   
+j2ee_application|j2ee_app_jrf_ws_port_properties|Oracle Web Service Endpoint Properties|WSDL URI 
+j2ee_application|j2ee_app_jrf_ws_port|Oracle Web Service Endpoint Metrics|Oracle WS Endpoint - Avg Invocation Time per interval(sec) 
+j2ee_application|j2ee_app_jrf_ws_port|Oracle Web Service Endpoint Metrics|Oracle WS Endpoint - Fault Count 
+j2ee_application|j2ee_app_jrf_ws_port|Oracle Web Service Endpoint Metrics|Oracle WS Endpoint - Fault Count Delta   
+j2ee_application|j2ee_app_jrf_ws_port|Oracle Web Service Endpoint Metrics|Oracle WS Endpoint - Fault Throughput(per minute)  
+j2ee_application|j2ee_app_jrf_ws_port|Oracle Web Service Endpoint Metrics|Oracle WS Endpoint - Invocation Count
+j2ee_application|j2ee_app_jrf_ws_port|Oracle Web Service Endpoint Metrics|Oracle WS Endpoint - Invocation Count Delta
+j2ee_application|j2ee_app_jrf_ws_port|Oracle Web Service Endpoint Metrics|Oracle WS Endpoint - Invocation Throughput(per minute) 
+j2ee_application|j2ee_app_jrf_ws_port|Oracle Web Service Endpoint Metrics|Oracle WS Endpoint - Start Time(ms since Epoch)    
+j2ee_application|j2ee_app_jrf_ws_port|Oracle Web Service Endpoint Metrics|Oracle WS Endpoint - Total Invocation Time Delta(sec)  
+j2ee_application|j2ee_app_jrf_ws_port|Oracle Web Service Endpoint Metrics|Oracle WS Endpoint - Total Invocation Time(sec)    
+j2ee_application|j2ee_app_jrf_ws_service|Oracle Web Service Metrics|Average Response Time Per Interval (ms)
+j2ee_application|j2ee_app_jrf_ws_service|Oracle Web Service Metrics|Fault Throughput (per minute)
+j2ee_application|j2ee_app_jrf_ws_service|Oracle Web Service Metrics|Faults Per Interval 
+j2ee_application|j2ee_app_jrf_ws_service|Oracle Web Service Metrics|Invocation Throughput (per minute)   
+j2ee_application|j2ee_app_jrf_ws_service|Oracle Web Service Metrics|Invocation Time Per Interval 
+j2ee_application|j2ee_app_jrf_ws_service|Oracle Web Service Metrics|Invocations Per Interval 
+j2ee_application|j2ee_app_jrf_ws_service|Oracle Web Service Metrics|Responses Per Interval   
+j2ee_application|j2ee_app_owsm_policy_violation_summary|OWSM Policy Violation Summary Metrics|OWSM Policy Violation Summary - Total Violation Delta
+j2ee_application|j2ee_app_owsm_policy_violation_summary|OWSM Policy Violation Summary Metrics|OWSM Policy Violation Summary - Total Violations 
+j2ee_application|j2ee_app_owsm_policy_violation|OWSM Policy Violation Detail Metrics|OWSM Policy Category
+j2ee_application|j2ee_app_owsm_policy_violation|OWSM Policy Violation Detail Metrics|OWSM Policy Violation - Authentication Fault Delta  
+j2ee_application|j2ee_app_owsm_policy_violation|OWSM Policy Violation Detail Metrics|OWSM Policy Violation - Authentication Faults   
+j2ee_application|j2ee_app_owsm_policy_violation|OWSM Policy Violation Detail Metrics|OWSM Policy Violation - Authorization Fault Delta   
+j2ee_application|j2ee_app_owsm_policy_violation|OWSM Policy Violation Detail Metrics|OWSM Policy Violation - Authorization Faults
+j2ee_application|j2ee_app_owsm_policy_violation|OWSM Policy Violation Detail Metrics|OWSM Policy Violation - Confidentiality Fault Delta 
+j2ee_application|j2ee_app_owsm_policy_violation|OWSM Policy Violation Detail Metrics|OWSM Policy Violation - Confidentiality Faults  
+j2ee_application|j2ee_app_owsm_policy_violation|OWSM Policy Violation Detail Metrics|OWSM Policy Violation - Integrity Fault Delta   
+j2ee_application|j2ee_app_owsm_policy_violation|OWSM Policy Violation Detail Metrics|OWSM Policy Violation - Integrity Faults
+j2ee_application|j2ee_app_owsm_policy_violation|OWSM Policy Violation Detail Metrics|OWSM Policy Violation - Total Policy Fault Delta
+j2ee_application|j2ee_app_owsm_policy_violation|OWSM Policy Violation Detail Metrics|OWSM Policy Violation - Total Policy Faults 
+j2ee_application|mds_j2ee_application_rollup|MDS Metrics|IOs Per Document Get
+j2ee_application|mds_j2ee_application_rollup|MDS Metrics|IOs Per MO Content Get 
+j2ee_application|mds_j2ee_application_rollup|MDS Metrics|IOs Per Metadata Object Get
+j2ee_application|mds_j2ee_application_rollup|MDS Metrics|Metadata Object Get Processing Time (seconds)   
+j2ee_application|mds_j2ee_application_rollup|MDS Metrics|Metadata Object Gets Per Second
+j2ee_application|mds_j2ee_application_rollup|MDS Metrics|Metadata Update Processing Time (seconds)   
+j2ee_application|mds_j2ee_application_rollup|MDS Metrics|Metadata Updates Per Second
+jrf_webservice|j2ee_app_jrf_ws_service_tc|Oracle Web Service Target Component Metrics|Average Response Time Per Interval (ms)
+jrf_webservice|j2ee_app_jrf_ws_service_tc|Oracle Web Service Target Component Metrics|Fault Throughput (per minute)
+jrf_webservice|j2ee_app_jrf_ws_service_tc|Oracle Web Service Target Component Metrics|Invocation Throughput (per minute)
+metadata_repository|MDS_PARTITION_ROLLUP|MDS_PARTITION_ROLLUP|Document write time (in seconds)   
+metadata_repository|MDS_PARTITION_ROLLUP|MDS_PARTITION_ROLLUP|Load 
+metadata_repository|MDS_PARTITION_ROLLUP|MDS_PARTITION_ROLLUP|Number of document writes per sencond  
+metadata_repository|MDS_PARTITION_ROLLUP|MDS_PARTITION_ROLLUP|Response 
+metadata_repository|MDS_REPOSITORY_ROLLUP|MDS_REPOSITORY_ROLLUP|Load   
+metadata_repository|MDS_REPOSITORY_ROLLUP|MDS_REPOSITORY_ROLLUP|Response   
+oracle_apache|ResourceUsage|Resource Usage|CPU Usage (%) 
+oracle_apache|ResourceUsage|Resource Usage|Memory Usage (%)  
+oracle_apache|ResourceUsage|Resource Usage|Memory Usage (MB) 
+oracle_apache|Response|Response|Response - Status    
+oracle_apache|ohs_module|OHS Module Metrics|Request Handling Throughput, for a Module (requests per second)
+oracle_apache|ohs_module|OHS Module Metrics|Request Handling Time, for a Module (seconds)    
+oracle_apache|ohs_module|OHS Module Metrics|Total Handled Requests for a Module 
+oracle_apache|ohs_responses|OHS Response Code Metrics|HTTP 4xx error throughput (errors per second)  
+oracle_apache|ohs_responses|OHS Response Code Metrics|HTTP 5xx error throughput (errors per second)  
+oracle_apache|ohs_server|OHS Server Metrics|Active HTTP Connections
+oracle_apache|ohs_server|OHS Server Metrics|Active HTTP Requests 
+oracle_apache|ohs_server|OHS Server Metrics|Busy Processes   
+oracle_apache|ohs_server|OHS Server Metrics|Busy Threads 
+oracle_apache|ohs_server|OHS Server Metrics|Busy Threads (%) 
+oracle_apache|ohs_server|OHS Server Metrics|Connection Duration (seconds)  
+oracle_apache|ohs_server|OHS Server Metrics|Error Rate (%)   
+oracle_apache|ohs_server|OHS Server Metrics|Idle Processes   
+oracle_apache|ohs_server|OHS Server Metrics|Idle Threads 
+oracle_apache|ohs_server|OHS Server Metrics|Number of Threads
+oracle_apache|ohs_server|OHS Server Metrics|Percentage of Busy Processes   
+oracle_apache|ohs_server|OHS Server Metrics|Request Processing Time (milli seconds)
+oracle_apache|ohs_server|OHS Server Metrics|Request Processing Time (seconds)
+oracle_apache|ohs_server|OHS Server Metrics|Request Throughput (requests per second)
+oracle_apache|ohs_server|OHS Server Metrics|Response Data Processed (KB per response)   
+oracle_apache|ohs_server|OHS Server Metrics|Response Data Throughput (KB per second)
+oracle_apache|ohs_virtualHost|OHS Virtual Host Metrics|Active Requests for a Virtual Host    
+oracle_apache|ohs_virtualHost|OHS Virtual Host Metrics|Request Processing Time for a Virtual Host (seconds)
+oracle_apache|ohs_virtualHost|OHS Virtual Host Metrics|Request Throughput for a Virtual Host (requests per second) 
+oracle_apache|ohs_virtualHost|OHS Virtual Host Metrics|Response Data Processed for a Virtual Host (KB per response)
+oracle_apache|ohs_virtualHost|OHS Virtual Host Metrics|Response Data Throughput for a Virtual Host (KB per second) 
+oracle_apache|ohs_virtualHost|OHS Virtual Host Metrics|Virtual Host Type   
+oracle_beacon|LogCleanUp|Log Clean Up|[Log Clean Up]Status   
+oracle_beacon|Response|Response|Status
+oracle_database|DATABASE_SIZE|Database Size|Allocated Space(GB)  
+oracle_database|DATABASE_SIZE|Database Size|Used Space(GB)   
+oracle_database|DGPrimaryDBName|DGPrimaryDBName|db_name  
+oracle_database|Database_Resource_Usage|Database Limits|Current Logons Count 
+oracle_database|Database_Resource_Usage|Database Limits|Current Open Cursors Count 
+oracle_database|Database_Resource_Usage|Database Limits|Lock Limit Usage (%) 
+oracle_database|Database_Resource_Usage|Database Limits|Process Limit Usage (%) 
+oracle_database|Database_Resource_Usage|Database Limits|Session Limit Usage (%) 
+oracle_database|Database_Resource_Usage|Database Limits|User Limit Usage (%) 
+oracle_database|DeferredTrans|Deferred Transactions|Deferred Transaction Count
+oracle_database|DeferredTrans|Deferred Transactions|Deferred Transaction Error Count
+oracle_database|ME$Last_full_backup_db_instance|Last full backup db instance|Days since backup   
+oracle_database|ME$Last_full_backup_db_instance|Last full backup db instance|Last backup
+oracle_database|ME$datafile_offline|datafile_offline|status  
+oracle_database|ME$last_full_backup|Last Full Backup|Days Since Last Backup
+oracle_database|ME$scml_test|scml validation|Status  
+oracle_database|OCMInstrumentation|OCM Instrumentation|Instrumentation Present
+oracle_database|OCMInstrumentation|OCM Instrumentation|Need to Instrument with OCM 
+oracle_database|OCMInstrumentation|OCM Instrumentation|OCM Configured  
+oracle_database|Recovery_Area|Recovery Area|Recovery Area Free Space (%)   
+oracle_database|Response|Response|Active State  
+oracle_database|Response|Response|Archiver 
+oracle_database|Response|Response|Database Status    
+oracle_database|Response|Response|State 
+oracle_database|Response|Response|Status
+oracle_database|Temporary_File_Status|Temporary File Status|File Name  
+oracle_database|Temporary_File_Status|Temporary File Status|Status 
+oracle_database|UserAudit|User Audit|Audited Host    
+oracle_database|UserAudit|User Audit|Audited User    
+oracle_database|UserAudit|User Audit|Audited User Session Count  
+oracle_database|UserLocks|User Locks|Maximum Blocked DB Time (seconds) 
+oracle_database|UserLocks|User Locks|Maximum Blocked Session Count 
+oracle_database|adrAlertLogDataFailure|Data Failure|Alert Log Name 
+oracle_database|adrAlertLogDataFailure|Data Failure|Data Failure Detected  
+oracle_database|adrAlertLogIncidentError|Incident|Access Violation 
+oracle_database|adrAlertLogIncidentError|Incident|Alert Log Error Trace File 
+oracle_database|adrAlertLogIncidentError|Incident|Alert Log Name 
+oracle_database|adrAlertLogIncidentError|Incident|Cluster Error  
+oracle_database|adrAlertLogIncidentError|Incident|Deadlock   
+oracle_database|adrAlertLogIncidentError|Incident|ECID   
+oracle_database|adrAlertLogIncidentError|Incident|File Access Error
+oracle_database|adrAlertLogIncidentError|Incident|Generic Incident 
+oracle_database|adrAlertLogIncidentError|Incident|Generic Internal Error   
+oracle_database|adrAlertLogIncidentError|Incident|Impact 
+oracle_database|adrAlertLogIncidentError|Incident|Incident ID
+oracle_database|adrAlertLogIncidentError|Incident|Inconsistent DB State
+oracle_database|adrAlertLogIncidentError|Incident|Internal SQL Error   
+oracle_database|adrAlertLogIncidentError|Incident|Oracle Data Block Corruption
+oracle_database|adrAlertLogIncidentError|Incident|Out of Memory  
+oracle_database|adrAlertLogIncidentError|Incident|Redo Log Corruption  
+oracle_database|adrAlertLogIncidentError|Incident|Session Terminated   
+oracle_database|adrAlertLogOperationalError|Operational Error|Alert Log Error Trace File
+oracle_database|adrAlertLogOperationalError|Operational Error|Alert Log Name 
+oracle_database|adrAlertLogOperationalError|Operational Error|Archiver Hung
+oracle_database|adrAlertLogOperationalError|Operational Error|Data Block Corruption
+oracle_database|adrAlertLogOperationalError|Operational Error|Error Codes  
+oracle_database|adrAlertLogOperationalError|Operational Error|Generic Operational Error 
+oracle_database|adrAlertLogOperationalError|Operational Error|Media Failure
+oracle_database|adrAlertLogOperationalError|Operational Error|User-Defined Error
+oracle_database|adrAlertLogOperationalError|Operational Error|User-Defined Text 
+oracle_database|adrAlertLogOperationalError|Operational Error|User-Defined Warning 
+oracle_database|alertLogStatus|Alert Log Error Status|Archiver Hung Alert Log Error Status   
+oracle_database|alertLogStatus|Alert Log Error Status|Data Block Corruption Alert Log Error Status   
+oracle_database|alertLogStatus|Alert Log Error Status|Generic Alert Log Error Status
+oracle_database|alertLogStatus|Alert Log Error Status|Media Failure Alert Log Error Status   
+oracle_database|alertLogStatus|Alert Log Error Status|Session Terminated Alert Log Error Status  
+oracle_database|alertLog|Alert Log|Alert Log Error Trace File
+oracle_database|alertLog|Alert Log|Alert Log Name    
+oracle_database|alertLog|Alert Log|Archiver Hung Alert Log Error 
+oracle_database|alertLog|Alert Log|Data Block Corruption Alert Log Error   
+oracle_database|alertLog|Alert Log|Generic Alert Log Error   
+oracle_database|alertLog|Alert Log|Media Failure Alert Log Error 
+oracle_database|alertLog|Alert Log|Session Terminated Alert Log Error  
+oracle_database|aq_buff_queue_space_usage|Space usage by buffered queues|Allocated Streams pool size (MB)
+oracle_database|aq_buff_queue_space_usage|Space usage by buffered queues|Buffered queue space usage wrt streams pool size (%)
+oracle_database|aq_buff_queue_space_usage|Space usage by buffered queues|Instance Name  
+oracle_database|aq_buff_queue_space_usage|Space usage by buffered queues|Queue size (MB)
+oracle_database|aq_msgs_per_buffered_queue_per_subscriber|Messages per buffered queue per subscriber|Average age of messages/buffered queue/subscriber (seconds)
+oracle_database|aq_msgs_per_buffered_queue_per_subscriber|Messages per buffered queue per subscriber|First message age in buffered queue/subscriber (Seconds) 
+oracle_database|aq_msgs_per_buffered_queue_per_subscriber|Messages per buffered queue per subscriber|Messages processed/buffered queue/subscriber (%)
+oracle_database|aq_msgs_per_buffered_queue_per_subscriber|Messages per buffered queue per subscriber|Messages processed/buffered queue/subscriber per minute (%)
+oracle_database|aq_msgs_per_buffered_queue_per_subscriber|Messages per buffered queue per subscriber|Total messages processed/buffered queue/subscriber per minute 
+oracle_database|aq_msgs_per_buffered_queue_per_subscriber|Messages per buffered queue per subscriber|Total messages received/buffered queue/subscriber per minute  
+oracle_database|aq_msgs_per_buffered_queue_per_subscriber|Messages per buffered queue per subscriber|Total number of messages processed  
+oracle_database|aq_msgs_per_buffered_queue_per_subscriber|Messages per buffered queue per subscriber|Total number of messages received   
+oracle_database|aq_msgs_per_buffered_queue|Messages per buffered queue|Average age of messages per buffered queue (seconds)  
+oracle_database|aq_msgs_per_buffered_queue|Messages per buffered queue|First Message Age in Buffered Queue Per Queue (Seconds)   
+oracle_database|aq_msgs_per_buffered_queue|Messages per buffered queue|Messages processed per buffered queue (%)   
+oracle_database|aq_msgs_per_buffered_queue|Messages per buffered queue|Messages processed per buffered queue (%) per minute  
+oracle_database|aq_msgs_per_buffered_queue|Messages per buffered queue|Spilled Messages 
+oracle_database|aq_msgs_per_buffered_queue|Messages per buffered queue|Total Messages Processed per Buffered Queue per Minute
+oracle_database|aq_msgs_per_buffered_queue|Messages per buffered queue|Total Messages Received per Buffered Queue per Minute 
+oracle_database|aq_msgs_per_buffered_queue|Messages per buffered queue|Total number of messages processed
+oracle_database|aq_msgs_per_buffered_queue|Messages per buffered queue|Total number of messages received 
+oracle_database|aq_msgs_per_persistent_queue_per_subscriber|Messages per persistent queue per subscriber|Average age of messages/persistent queue/subscriber (seconds)  
+oracle_database|aq_msgs_per_persistent_queue_per_subscriber|Messages per persistent queue per subscriber|First Message Age in Persistent Queue/Subscriber (seconds)
+oracle_database|aq_msgs_per_persistent_queue_per_subscriber|Messages per persistent queue per subscriber|Messages processed/persistent queue/subscriber (%)   
+oracle_database|aq_msgs_per_persistent_queue_per_subscriber|Messages per persistent queue per subscriber|Messages processed/persistent queue/subscriber per minute (%)  
+oracle_database|aq_msgs_per_persistent_queue_per_subscriber|Messages per persistent queue per subscriber|Total messages processed/persistent queue/subscriber per minute
+oracle_database|aq_msgs_per_persistent_queue_per_subscriber|Messages per persistent queue per subscriber|Total messages received/persistent queue/subscriber per minute 
+oracle_database|aq_msgs_per_persistent_queue_per_subscriber|Messages per persistent queue per subscriber|Total number of messages processed
+oracle_database|aq_msgs_per_persistent_queue_per_subscriber|Messages per persistent queue per subscriber|Total number of messages received 
+oracle_database|aq_msgs_per_persistent_queue|Messages per persistent queue|Age of the first message in persistent queue per queue (seconds)
+oracle_database|aq_msgs_per_persistent_queue|Messages per persistent queue|Average age of messages per persistent queue (seconds)
+oracle_database|aq_msgs_per_persistent_queue|Messages per persistent queue|Messages processed per persistent queue (%)  
+oracle_database|aq_msgs_per_persistent_queue|Messages per persistent queue|Messages processed per persistent queue (%) per minute
+oracle_database|aq_msgs_per_persistent_queue|Messages per persistent queue|Total Messages Processed per Persistent Queue per Minute  
+oracle_database|aq_msgs_per_persistent_queue|Messages per persistent queue|Total Messages Received per Persistent Queue per Minute   
+oracle_database|aq_msgs_per_persistent_queue|Messages per persistent queue|Total number of messages processed  
+oracle_database|aq_msgs_per_persistent_queue|Messages per persistent queue|Total number of messages received   
+oracle_database|archFull|Archive Area|Archive Area Used (%)  
+oracle_database|archFull|Archive Area|Archive Area Used (KB) 
+oracle_database|archFull|Archive Area|Free Archive Area (KB) 
+oracle_database|archFull|Archive Area|Total Archive Area (KB)
+oracle_database|audit_failed_logins2|Failed Logins|Failed Login Count  
+oracle_database|audit_failed_logins_historical|Failed Logins (Historical)|Failed Login Count 
+oracle_database|dataguard_pperf|Data Guard Performance|Redo Generation Rate (KB/second) 
+oracle_database|dataguard_sperf_112|Data Guard Performance|Apply Lag (seconds)
+oracle_database|dataguard_sperf_112|Data Guard Performance|Apply Lag Data Refresh Time  
+oracle_database|dataguard_sperf_112|Data Guard Performance|Estimated Failover Time (seconds) 
+oracle_database|dataguard_sperf_112|Data Guard Performance|Redo Apply Rate (KB/second)  
+oracle_database|dataguard_sperf_112|Data Guard Performance|Transport Lag (seconds) 
+oracle_database|dataguard_sperf_112|Data Guard Performance|Transport Lag Data Refresh Time   
+oracle_database|dataguard|Data Guard Status|Data Guard Status
+oracle_database|db_alert_log_status| DB Alert Log Error Status  |Archiver Hung Alert Log Error Status
+oracle_database|db_alert_log_status| DB Alert Log Error Status  |Data Block Corruption Alert Log Error Status  
+oracle_database|db_alert_log_status| DB Alert Log Error Status  |Generic Alert Log Error Status  
+oracle_database|db_alert_log_status| DB Alert Log Error Status  |Media Failure Alert Log Error Status
+oracle_database|db_alert_log_status| DB Alert Log Error Status  |Session Terminated Alert Log Error Status 
+oracle_database|db_alert_log|DB Alert Log|Alert Log Error Trace File   
+oracle_database|db_alert_log|DB Alert Log|Alert Log Name 
+oracle_database|db_alert_log|DB Alert Log|Archiver Hung Alert Log Error
+oracle_database|db_alert_log|DB Alert Log|Data Block Corruption Alert Log Error 
+oracle_database|db_alert_log|DB Alert Log|Generic Alert Log Error
+oracle_database|db_alert_log|DB Alert Log|Media Failure Alert Log Error
+oracle_database|db_alert_log|DB Alert Log|Session Terminated Alert Log Error 
+oracle_database|db_alert_log|DB Alert Log|Time/Line Number   
+oracle_database|db_inst_cpu_usage|CPU Usage|Maximum Total CPU Usage Per Second (CentiSecond Per Second)  
+oracle_database|db_inst_io_rate|Database Instance I/O Rate|Maximum Total Physical Read and Write (Bytes Per Second)
+oracle_database|db_inst_io_rate|Database Instance I/O Rate|Maximum Total Physical Read and Write (Requests Per Second)  
+oracle_database|db_inst_opt_sga|Optimal SGA|Optimal SGA Size (MB)
+oracle_database|db_inst_pga_alloc|PGA Allocated|Total PGA Allocated (MB)   
+oracle_database|dbjob_status|Database Job Status|Broken Job Count
+oracle_database|dbjob_status|Database Job Status|Failed Job Count
+oracle_database|dumpFull|Dump Area|Dump Area Directory   
+oracle_database|dumpFull|Dump Area|Dump Area Used (%)
+oracle_database|dumpFull|Dump Area|Dump Area Used (KB)   
+oracle_database|dumpFull|Dump Area|Free Dump Area (KB)   
+oracle_database|dumpFull|Dump Area|Total Dump Area (KB)  
+oracle_database|ha_flashrecovery|Flash Recovery|Flash Recovery Area
+oracle_database|ha_flashrecovery|Flash Recovery|Flash Recovery Area Size   
+oracle_database|ha_flashrecovery|Flash Recovery|Flashback On 
+oracle_database|ha_flashrecovery|Flash Recovery|Log Mode 
+oracle_database|ha_flashrecovery|Flash Recovery|Non-reclaimable Flash Recovery Area (%) 
+oracle_database|ha_flashrecovery|Flash Recovery|Oldest Flashback Time  
+oracle_database|ha_flashrecovery|Flash Recovery|Reclaimable Flash Recovery Area (%)
+oracle_database|ha_flashrecovery|Flash Recovery|Usable Flash Recovery Area (%)
+oracle_database|ha_rac_intrconn_traffic|Interconnect Traffic|Transfer Rate (MB/s)  
+oracle_database|ha_rac_intrconn_type|Interconnect|Interface Type 
+oracle_database|ha_recovery|Recovery|Corrupt Data Block Count
+oracle_database|ha_recovery|Recovery|Datafiles Need Media Recovery 
+oracle_database|ha_recovery|Recovery|Missing Media File Count
+oracle_database|incident_meter|Incident Meter|CRITICAL_INCIDENTS 
+oracle_database|incident_meter|Incident Meter|SEVERITY_INDEX 
+oracle_database|incident_meter|Incident Meter|WARNING_INCIDENTS  
+oracle_database|instance_efficiency|Efficiency|Buffer Cache Hit (%)
+oracle_database|instance_efficiency|Efficiency|CPU Usage (per second)  
+oracle_database|instance_efficiency|Efficiency|CPU Usage (per transaction) 
+oracle_database|instance_efficiency|Efficiency|Cursor Cache Hit (%)
+oracle_database|instance_efficiency|Efficiency|Data Dictionary Hit (%) 
+oracle_database|instance_efficiency|Efficiency|Database CPU Time (%)   
+oracle_database|instance_efficiency|Efficiency|Library Cache Hit (%)   
+oracle_database|instance_efficiency|Efficiency|Library Cache Miss (%)  
+oracle_database|instance_efficiency|Efficiency|PGA Cache Hit (%) 
+oracle_database|instance_efficiency|Efficiency|Parallel Execution Downgraded (per second)    
+oracle_database|instance_efficiency|Efficiency|Parallel Execution Downgraded 25% or more (per second)
+oracle_database|instance_efficiency|Efficiency|Parallel Execution Downgraded 50% or more (per second)
+oracle_database|instance_efficiency|Efficiency|Parallel Execution Downgraded 75% or more (per second)
+oracle_database|instance_efficiency|Efficiency|Parallel Execution Downgraded to Serial (per second)  
+oracle_database|instance_efficiency|Efficiency|Parallel Execution Downgraded to Serial (per transaction) 
+oracle_database|instance_efficiency|Efficiency|Redo Log Allocation Hit (%) 
+oracle_database|instance_efficiency|Efficiency|Response Time (per transaction)
+oracle_database|instance_efficiency|Efficiency|Row Cache Miss Ratio (%)
+oracle_database|instance_efficiency|Efficiency|Sorts in Memory (%) 
+oracle_database|instance_throughput|Throughput|All Sessions  
+oracle_database|instance_throughput|Throughput|Average Active Sessions 
+oracle_database|instance_throughput|Throughput|Average Synchronous Single-Block Read Latency (ms)
+oracle_database|instance_throughput|Throughput|BG Checkpoints (per second) 
+oracle_database|instance_throughput|Throughput|Branch Node Splits (per second)
+oracle_database|instance_throughput|Throughput|Branch Node Splits (per transaction)
+oracle_database|instance_throughput|Throughput|Consistent Read Blocks Created (per second)   
+oracle_database|instance_throughput|Throughput|Consistent Read Blocks Created (per transaction)  
+oracle_database|instance_throughput|Throughput|Consistent Read Changes (per second)
+oracle_database|instance_throughput|Throughput|Consistent Read Changes (per transaction)
+oracle_database|instance_throughput|Throughput|Consistent Read Gets (per second)
+oracle_database|instance_throughput|Throughput|Consistent Read Gets (per transaction)   
+oracle_database|instance_throughput|Throughput|Consistent Read Undo Records Applied (per second) 
+oracle_database|instance_throughput|Throughput|Consistent Read Undo Records Applied (per transaction)
+oracle_database|instance_throughput|Throughput|Cumulative Logons (per second)
+oracle_database|instance_throughput|Throughput|Cumulative Logons (per transaction) 
+oracle_database|instance_throughput|Throughput|DBWR Checkpoints (per second) 
+oracle_database|instance_throughput|Throughput|Database Block Changes (per second) 
+oracle_database|instance_throughput|Throughput|Database Block Changes (per transaction) 
+oracle_database|instance_throughput|Throughput|Database Block Gets (per second) 
+oracle_database|instance_throughput|Throughput|Database Block Gets (per transaction)
+oracle_database|instance_throughput|Throughput|Database Time (centiseconds per second)  
+oracle_database|instance_throughput|Throughput|Enqueue Deadlocks (per second)
+oracle_database|instance_throughput|Throughput|Enqueue Deadlocks (per transaction) 
+oracle_database|instance_throughput|Throughput|Enqueue Requests (per second) 
+oracle_database|instance_throughput|Throughput|Enqueue Requests (per transaction)  
+oracle_database|instance_throughput|Throughput|Enqueue Timeout (per second)
+oracle_database|instance_throughput|Throughput|Enqueue Timeout (per transaction)
+oracle_database|instance_throughput|Throughput|Enqueue Waits (per second)  
+oracle_database|instance_throughput|Throughput|Enqueue Waits (per transaction)
+oracle_database|instance_throughput|Throughput|Executes (per second)   
+oracle_database|instance_throughput|Throughput|Executes Performed without Parses (%)
+oracle_database|instance_throughput|Throughput|Full Index Scans (per second) 
+oracle_database|instance_throughput|Throughput|Full Index Scans (per transaction)  
+oracle_database|instance_throughput|Throughput|Hard Parses (per second)
+oracle_database|instance_throughput|Throughput|Hard Parses (per transaction) 
+oracle_database|instance_throughput|Throughput|I/O Megabytes (per second)  
+oracle_database|instance_throughput|Throughput|I/O Requests (per second)   
+oracle_database|instance_throughput|Throughput|Leaf Node Splits (per second) 
+oracle_database|instance_throughput|Throughput|Leaf Node Splits (per transaction)  
+oracle_database|instance_throughput|Throughput|Network Bytes (per second)  
+oracle_database|instance_throughput|Throughput|Number of Transactions (per second) 
+oracle_database|instance_throughput|Throughput|Open Cursors (per second)   
+oracle_database|instance_throughput|Throughput|Open Cursors (per transaction)
+oracle_database|instance_throughput|Throughput|Parse Failure Count (per second) 
+oracle_database|instance_throughput|Throughput|Parse Failure Count (per transaction)
+oracle_database|instance_throughput|Throughput|Physical Reads (per second) 
+oracle_database|instance_throughput|Throughput|Physical Reads (per transaction) 
+oracle_database|instance_throughput|Throughput|Physical Reads Direct (per second)  
+oracle_database|instance_throughput|Throughput|Physical Reads Direct (per transaction)  
+oracle_database|instance_throughput|Throughput|Physical Reads Direct Lobs (per second)  
+oracle_database|instance_throughput|Throughput|Physical Reads Direct Lobs (per transaction)  
+oracle_database|instance_throughput|Throughput|Physical Writes (per second)
+oracle_database|instance_throughput|Throughput|Physical Writes (per transaction)
+oracle_database|instance_throughput|Throughput|Physical Writes Direct (per second) 
+oracle_database|instance_throughput|Throughput|Physical Writes Direct (per transaction) 
+oracle_database|instance_throughput|Throughput|Physical Writes Direct Lobs (per second) 
+oracle_database|instance_throughput|Throughput|Physical Writes Direct Lobs (per transaction) 
+oracle_database|instance_throughput|Throughput|Recursive Calls (per second)
+oracle_database|instance_throughput|Throughput|Recursive Calls (per transaction)
+oracle_database|instance_throughput|Throughput|Redo Generated (per second) 
+oracle_database|instance_throughput|Throughput|Redo Generated (per transaction) 
+oracle_database|instance_throughput|Throughput|Redo Writes (per second)
+oracle_database|instance_throughput|Throughput|Redo Writes (per transaction) 
+oracle_database|instance_throughput|Throughput|Rows Processed (per sort)   
+oracle_database|instance_throughput|Throughput|Scans on Long Tables (per second)
+oracle_database|instance_throughput|Throughput|Scans on Long Tables (per transaction)   
+oracle_database|instance_throughput|Throughput|Session Logical Reads (per second)  
+oracle_database|instance_throughput|Throughput|Session Logical Reads (per transaction)  
+oracle_database|instance_throughput|Throughput|Soft Parse (%)
+oracle_database|instance_throughput|Throughput|Sorts to Disk (per second)  
+oracle_database|instance_throughput|Throughput|Sorts to Disk (per transaction)
+oracle_database|instance_throughput|Throughput|Total Index Scans (per second)
+oracle_database|instance_throughput|Throughput|Total Index Scans (per transaction) 
+oracle_database|instance_throughput|Throughput|Total Parses (per second)   
+oracle_database|instance_throughput|Throughput|Total Parses (per transaction)
+oracle_database|instance_throughput|Throughput|Total Table Scans (per second)
+oracle_database|instance_throughput|Throughput|Total Table Scans (per transaction) 
+oracle_database|instance_throughput|Throughput|User Calls (%)
+oracle_database|instance_throughput|Throughput|User Calls (per second) 
+oracle_database|instance_throughput|Throughput|User Calls (per transaction)
+oracle_database|instance_throughput|Throughput|User Commits (per second)   
+oracle_database|instance_throughput|Throughput|User Commits (per transaction)
+oracle_database|instance_throughput|Throughput|User Rollback Undo Records Applied (per second)   
+oracle_database|instance_throughput|Throughput|User Rollback Undo Records Applied (per transaction)  
+oracle_database|instance_throughput|Throughput|User Rollbacks (per second) 
+oracle_database|instance_throughput|Throughput|User Rollbacks (per transaction) 
+oracle_database|invalid_objects|Invalid Objects by Schema|Owner's Invalid Object Count  
+oracle_database|memory_usage|Memory Usage|Total Memory Usage (MB)
+oracle_database|observer_11g|Data Guard Fast-Start Failover Observer|Observer Status
+oracle_database|problemSegTbsp|Tablespaces With Problem Segments|Segments Approaching Maximum Extents
+oracle_database|problemSegTbsp|Tablespaces With Problem Segments|Segments Approaching Maximum Extents Count
+oracle_database|problemSegTbsp|Tablespaces With Problem Segments|Segments Not Able to Extend 
+oracle_database|problemSegTbsp|Tablespaces With Problem Segments|Segments Not Able to Extend Count   
+oracle_database|problemTbsp10iDct|Tablespaces Full (dictionary managed)|Tablespace Free Space (MB) (dictionary managed) 
+oracle_database|problemTbsp10iDct|Tablespaces Full (dictionary managed)|Tablespace Space Used (%) (dictionary managed)  
+oracle_database|problemTbspTemp|Tablespaces Full (Temp)|Tablespace Free Space (MB) (Temp)    
+oracle_database|problemTbspTemp|Tablespaces Full (Temp)|Tablespace Space Used (%) (Temp)
+oracle_database|problemTbspUndo|Tablespaces Full (Undo)|Tablespace Free Space (MB) (Undo)    
+oracle_database|problemTbspUndo|Tablespaces Full (Undo)|Tablespace Space Used (%) (Undo)
+oracle_database|problemTbsp|Tablespaces Full|Tablespace Free Space (MB)
+oracle_database|problemTbsp|Tablespaces Full|Tablespace Space Used (%) 
+oracle_database|rac_global_cache|Global Cache Statistics|Global Cache Average CR Block Request Time (centi-seconds)
+oracle_database|rac_global_cache|Global Cache Statistics|Global Cache Average Current Block Request Time (centi-seconds)
+oracle_database|rac_global_cache|Global Cache Statistics|Global Cache Blocks Corrupt
+oracle_database|rac_global_cache|Global Cache Statistics|Global Cache Blocks Lost  
+oracle_database|scn_growth_statistics|SCN Growth Statistics|Current SCN
+oracle_database|scn_growth_statistics|SCN Growth Statistics|Current SCN Compatibility   
+oracle_database|scn_growth_statistics|SCN Growth Statistics|Max rate   
+oracle_database|scn_growth_statistics|SCN Growth Statistics|Maximum SCN Compatibility   
+oracle_database|scn_growth_statistics|SCN Growth Statistics|SCN Health 
+oracle_database|scn_growth_statistics|SCN Growth Statistics|SCN Total Growth Rate (per sec)  
+oracle_database|scn_instance_statistics|SCN Instance Statistics|SCN Intrinsic Growth Rate (per sec)  
+oracle_database|scn_max_statistics|SCN Max Statistics|Max SCN Jump Time (GMT)
+oracle_database|scn_max_statistics|SCN Max Statistics|Max SCN Jump in one second (last 24 hours) 
+oracle_database|segment_advisor_count|Segment Advisor Recommendations|Number of recommendations  
+oracle_database|service|Database Services|Service CPU Time (per user call) (microseconds)    
+oracle_database|service|Database Services|Service Response Time (per user call) (microseconds)   
+oracle_database|sessions_in_wait|System Sessions Waiting|Waiting Session Count
+oracle_database|sga_pool_wastage|SGA Pool Wastage|Java Pool Free (%)   
+oracle_database|sga_pool_wastage|SGA Pool Wastage|Large Pool Free (%)  
+oracle_database|sga_pool_wastage|SGA Pool Wastage|Shared Pool Free (%) 
+oracle_database|sizeOfOSAuditFiles|Operating System Audit Records|AUD  
+oracle_database|sizeOfOSAuditFiles|Operating System Audit Records|BIN  
+oracle_database|sizeOfOSAuditFiles|Operating System Audit Records|Size of Audit Files   
+oracle_database|sizeOfOSAuditFiles|Operating System Audit Records|XML  
+oracle_database|streams_processes_count|Streams Processes Count|Number of Apply Processes    
+oracle_database|streams_processes_count|Streams Processes Count|Number of Apply Processes Having Errors  
+oracle_database|streams_processes_count|Streams Processes Count|Number of Capture Processes  
+oracle_database|streams_processes_count|Streams Processes Count|Number of Capture Processes Having Errors
+oracle_database|streams_processes_count|Streams Processes Count|Number of Propagation Jobs   
+oracle_database|streams_processes_count|Streams Processes Count|Number of Propagations Having Errors 
+oracle_database|streams_processes_count|Streams Processes Count|Streams processes count 
+oracle_database|streams_processes_count|Streams Processes Count|Total Number of Propagation Errors   
+oracle_database|streams_processes_status|Streams Processes Status|Streams Process Errors
+oracle_database|streams_processes_status|Streams Processes Status|Streams Process Status
+oracle_database|system_response_time_per_call|System Response Time Per Call|Response Time (centi-seconds per call) 
+oracle_database|tbspAllocation|Tablespace Allocation|Tablespace Allocated Space (MB)
+oracle_database|tbspAllocation|Tablespace Allocation|Tablespace Used Space (MB) 
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Active Sessions Using CPU
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Active Sessions Waiting: I/O
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Active Sessions Waiting: Other
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Average Instance CPU (%) 
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Buffer busy waits (%)
+oracle_database|wait_bottlenecks|Wait Bottlenecks|CPU Time Delta (sec) 
+oracle_database|wait_bottlenecks|Wait Bottlenecks|DB file scattered read (%) 
+oracle_database|wait_bottlenecks|Wait Bottlenecks|DB file sequential read (%)
+oracle_database|wait_bottlenecks|Wait Bottlenecks|DB file single write (%) 
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Direct path read (%) 
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Direct path read (lob) (%) 
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Direct path write (%)
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Direct path write (lob) (%)
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Enqueue - other (%)  
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Enqueue: DML - contention (%) 
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Enqueue: HW, Segment High Water Mark - contention (%)  
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Enqueue: ST, Space Transaction - contention (%)
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Enqueue: TM, TX, Transaction - row lock contention (%) 
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Enqueue: TX mode 4, Transaction - allocate ITL entry (%) 
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Enqueue: UL: User-defined - contention (%) 
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Free buffer waits (%)
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Host CPU Utilization (%) 
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Latch free - other (%)   
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Latch: cache buffer chains (%)
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Latch: library cache (%) 
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Latch: redo copy (%) 
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Latch: shared pool (%)   
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Library cache load lock (%)
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Library cache lock (%)   
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Library cache pin (%)
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Local write wait (%) 
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Log buffer space (%) 
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Log file switch (archiving needed) (%)
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Log file switch (checkpoint complete) (%)  
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Log file switch completion (%)
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Log file sync (%)
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Log switch/archive (%)   
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Pipe put (%)   
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Row cache lock (%)   
+oracle_database|wait_bottlenecks|Wait Bottlenecks|SQL*Net break/reset to client (%)
+oracle_database|wait_bottlenecks|Wait Bottlenecks|SQL*Net break/reset to dblink (%)
+oracle_database|wait_bottlenecks|Wait Bottlenecks|SQL*Net message to client (%) 
+oracle_database|wait_bottlenecks|Wait Bottlenecks|SQL*Net message to dblink (%) 
+oracle_database|wait_bottlenecks|Wait Bottlenecks|SQL*Net more data from client (%)
+oracle_database|wait_bottlenecks|Wait Bottlenecks|SQL*Net more data from dblink (%)
+oracle_database|wait_bottlenecks|Wait Bottlenecks|SQL*Net more data to client (%)  
+oracle_database|wait_bottlenecks|Wait Bottlenecks|SQL*Net more data to dblink (%)  
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Wait Time (%)  
+oracle_database|wait_bottlenecks|Wait Bottlenecks|Write complete waits (%) 
+oracle_database|wait_sess_cls|Waits by Wait Class|Average Users Waiting Count
+oracle_database|wait_sess_cls|Waits by Wait Class|Database Time Spent Waiting (%)  
+oracle_database|wait_sess|Wait by Session Count|Session Waiting for Event Count 
+oracle_em_service|http_response|HTTP Transaction|[HTTP Transaction] Status Description  
+oracle_emd|EMDAdditionalStatus|EMD additional performance, resource, usage metrics|Active Job Count  
+oracle_emd|EMDAdditionalStatus|EMD additional performance, resource, usage metrics|CPU Load (%)  
+oracle_emd|EMDAdditionalStatus|EMD additional performance, resource, usage metrics|Dispatched Actions
+oracle_emd|EMDAdditionalStatus|EMD additional performance, resource, usage metrics|Java Heap Free (MB)   
+oracle_emd|EMDAdditionalStatus|EMD additional performance, resource, usage metrics|Java Heap Max 
+oracle_emd|EMDAdditionalStatus|EMD additional performance, resource, usage metrics|Java Heap Min 
+oracle_emd|EMDAdditionalStatus|EMD additional performance, resource, usage metrics|Java Heap Total (MB)  
+oracle_emd|EMDAdditionalStatus|EMD additional performance, resource, usage metrics|Java Heap Used (MB)   
+oracle_emd|EMDAdditionalStatus|EMD additional performance, resource, usage metrics|Minutes since Out-Of-Memory Agent Restart 
+oracle_emd|EMDCertExpDate|Agent Certificate Expiration Information|CertificateExpirationDate 
+oracle_emd|EMDCertExpDate|Agent Certificate Expiration Information|No. of Days for Expiration
+oracle_emd|EMDDiskUsage|Agent Disk Usage|Disk Usage for agent_inst/diag (%)
+oracle_emd|EMDDiskUsage|Agent Disk Usage|Disk Usage for agent_inst/diag(MB)
+oracle_emd|EMDDiskUsage|Agent Disk Usage|Disk Usage for agent_inst/sysman/emd (%)  
+oracle_emd|EMDDiskUsage|Agent Disk Usage|Disk Usage for agent_inst/sysman/emd(MB)  
+oracle_emd|EMDDiskUsage|Agent Disk Usage|Disk Usage for agent_inst/sysman/log (%)  
+oracle_emd|EMDDiskUsage|Agent Disk Usage|Disk Usage for agent_inst/sysman/log(MB)  
+oracle_emd|EMDDynamicPropertyRollup|EMDDynamicPropertyRollup|AvgElapsedTime (ms)
+oracle_emd|EMDDynamicPropertyRollup|EMDDynamicPropertyRollup|ExecutionCount
+oracle_emd|EMDDynamicPropertyRollup|EMDDynamicPropertyRollup|MaxElapsedTime (ms)
+oracle_emd|EMDDynamicPropertyRollup|EMDDynamicPropertyRollup|MinElapsedTime (ms)
+oracle_emd|EMDIdentity|User Identification|Group Name
+oracle_emd|EMDIdentity|User Identification|Location  
+oracle_emd|EMDIdentity|User Identification|Other Groups  
+oracle_emd|EMDIdentity|User Identification|User Name 
+oracle_emd|EMDStatus|EMD performance, resource, usage metrics|% of Collection Interval spent in Execution
+oracle_emd|EMDStatus|EMD performance, resource, usage metrics|% of Java Heap Max Used   
+oracle_emd|EMDStatus|EMD performance, resource, usage metrics|CPU - Used (%) 
+oracle_emd|EMDStatus|EMD performance, resource, usage metrics|Collections scheduled for next hour
+oracle_emd|EMDStatus|EMD performance, resource, usage metrics|HeartBeat Agent Time (ms) 
+oracle_emd|EMDStatus|EMD performance, resource, usage metrics|HeartBeat Network Time (ms)    
+oracle_emd|EMDStatus|EMD performance, resource, usage metrics|HeartBeat OMS Time (ms)   
+oracle_emd|EMDStatus|EMD performance, resource, usage metrics|Ping response (ms)
+oracle_emd|EMDStatus|EMD performance, resource, usage metrics|Transfer time from Agent to OMS (ms)   
+oracle_emd|EMDStatus|EMD performance, resource, usage metrics|Upload Agent Time (ms)
+oracle_emd|EMDStatus|EMD performance, resource, usage metrics|Upload Network Time (ms)  
+oracle_emd|EMDStatus|EMD performance, resource, usage metrics|Upload OMS Time (ms) 
+oracle_emd|EMDStatus|EMD performance, resource, usage metrics|Upload Work Queue (bytes) 
+oracle_emd|EMDUploadStats|Upload Statistics|Number of Files to Upload  
+oracle_emd|EMDUploadStats|Upload Statistics|Size of Files to Upload (MB)   
+oracle_emd|EMDUploadStats|Upload Statistics|Upload Rate (KB/sec) 
+oracle_emd|EMDUploadSystemMonitor|Upload System Monitor|Last time purge has occurred
+oracle_emd|EMDUploadSystemMonitor|Upload System Monitor|Loader declared backoff expiration   
+oracle_emd|EMDUploadSystemMonitor|Upload System Monitor|Number of files in the data channel pending upload 
+oracle_emd|EMDUploadSystemMonitor|Upload System Monitor|Number of files in the metadata channel pending upload 
+oracle_emd|EMDUploadSystemMonitor|Upload System Monitor|Number of files in the on demand channel pending upload
+oracle_emd|EMDUploadSystemMonitor|Upload System Monitor|Number of files in the severity channel pending upload 
+oracle_emd|EMDUploadSystemMonitor|Upload System Monitor|Number of files in the upload on fetch channel pending upload
+oracle_emd|EMDUploadSystemMonitor|Upload System Monitor|Number of files waiting to be merged 
+oracle_emd|EMDUserLimits|User Limit Info|CoreDump (blocks)   
+oracle_emd|EMDUserLimits|User Limit Info|Data (kbytes)   
+oracle_emd|EMDUserLimits|User Limit Info|File (blocks)   
+oracle_emd|EMDUserLimits|User Limit Info|NoFiles (descriptors)   
+oracle_emd|EMDUserLimits|User Limit Info|Stack (kbytes)  
+oracle_emd|EMDUserLimits|User Limit Info|Time (seconds)  
+oracle_emd|EMDUserLimits|User Limit Info|Virtual Mem (kbytes)
+oracle_emd|ProcessInfo|Agent Process Statistics|Agent Resident Memory Utilization (KB)  
+oracle_emd|ProcessInfo|Agent Process Statistics|Agent Virtual Memory Utilization (KB)   
+oracle_emd|ProcessInfo|Agent Process Statistics|CPU Usage (%)
+oracle_emd|ProcessInfo|Agent Process Statistics|Number Files Open
+oracle_emd|ProcessInfo|Agent Process Statistics|Number Handles Open
+oracle_emd|ProcessInfo|Agent Process Statistics|Number Threads Created 
+oracle_emd|ProcessInfo|Agent Process Statistics|Process ID   
+oracle_emd|ProcessInfo|Agent Process Statistics|Resident Memory Utilization (%) 
+oracle_emd|ProcessInfo|Agent Process Statistics|Resident Memory Utilization (KB)
+oracle_emd|ProcessInfo|Agent Process Statistics|Schedule Attempts Percentage 
+oracle_emd|ProcessInfo|Agent Process Statistics|Virtual Memory Utilization (KB) 
+oracle_emd|ProcessInfo|Agent Process Statistics|Virtual Memory Utilization Growth (%)   
+oracle_emd|Targets_not_uploading|Targets not uploading|Count of targets not uploading   
+oracle_emrep|AQ_Status|Management Services AQ Status|Dequeue Status
+oracle_emrep|AQ_Status|Management Services AQ Status|Enqueue Status
+oracle_emrep|AgentInstalls|AgentInstalls|num_installations   
+oracle_emrep|AgentTargets|AgentTargets|num_instances 
+oracle_emrep|Agent_Status|Agent Status|Restarts (past 24 hrs)
+oracle_emrep|Configuration|Configuration|Number of Administrators
+oracle_emrep|Configuration|Configuration|Number of Groups
+oracle_emrep|Configuration|Configuration|Number of Roles 
+oracle_emrep|Configuration|Configuration|Number of Targets   
+oracle_emrep|Configuration|Configuration|Repository Tablespace Used(MB)
+oracle_emrep|Configuration|Configuration|Target Addition Rate
+oracle_emrep|Configuration|Configuration|Total Repository Tablespace(MB)   
+oracle_emrep|Configuration|Configuration|User Addition Rate  
+oracle_emrep|ConsoleStatistics|Console Statistics|HTTP Sessions  
+oracle_emrep|ConsoleStatistics|Console Statistics|Repository Connection Pool Size  
+oracle_emrep|ConsoleStatistics|Console Statistics|Request Processing Time (sec) 
+oracle_emrep|ConsoleStatistics|Console Statistics|Request Processing Time in OMS (sec)  
+oracle_emrep|ConsoleStatistics|Console Statistics|Request Processing Time in Repository (sec)
+oracle_emrep|ConsoleStatistics|Console Statistics|Requests (per 10 min)
+oracle_emrep|DBInstalls|DBInstalls|num_installations 
+oracle_emrep|DBMS_Job_Status|DBMS Job Status|DBMS Job Invalid Schedule 
+oracle_emrep|DBMS_Job_Status|DBMS Job Status|DBMS Job Processing Time (% of Last Hour)  
+oracle_emrep|DBMS_Job_Status|DBMS Job Status|DBMS Job UpDown 
+oracle_emrep|DBMS_Job_Status|DBMS Job Status|Throughput Per Second 
+oracle_emrep|DBTargets|DBTargets|num_instances  
+oracle_emrep|EventPerformance|Event Performance|Event Processing Time (% of Last Hour)  
+oracle_emrep|EventPerformance|Event Performance|Events Processed (Last Hour) 
+oracle_emrep|EventPerformance|Event Performance|Pending Events Count   
+oracle_emrep|EventStatus|Event Status|Average Event Dequeue Time (Milliseconds) 
+oracle_emrep|EventStatus|Event Status|Average Event Processing Time (Seconds)
+oracle_emrep|EventStatus|Event Status|Average Event Queue Query Time (Seconds)
+oracle_emrep|EventStatus|Event Status|Average Event Queue Wait Time (Seconds)
+oracle_emrep|EventStatus|Event Status|Event System UpDown
+oracle_emrep|EventStatus|Event Status|Queues With Invalid Listener 
+oracle_emrep|EventStatus|Event Status|Queues With No Listener
+oracle_emrep|EventStatus|Event Status|Total Events Pending   
+oracle_emrep|EventStatus|Event Status|Total Events Processed (Last Hour)   
+oracle_emrep|FusionMWInstalls|FusionMWInstalls|num_installations 
+oracle_emrep|FusionMWTargets|FusionMWTargets|num_instances   
+oracle_emrep|Harvester_Job_Status|Harvester Job Status|Harvester Error 
+oracle_emrep|Harvester_Job_Status|Harvester Job Status|Harvester Status
+oracle_emrep|Harvester_Job_Status|Harvester Job Status|Last Harvester Job Run
+oracle_emrep|Harvester_Job_Status|Harvester Job Status|Next Harvester Job Run
+oracle_emrep|Harvester_Job_Status|Harvester Job Status|OCM Version 
+oracle_emrep|Harvester_Job_Status|Harvester Job Status|Total Targets Failed
+oracle_emrep|Harvester_Job_Status|Harvester Job Status|Total Targets Processed
+oracle_emrep|Harvester_Job_Status|Harvester Job Status|Total Targets Successful 
+oracle_emrep|Hosts|Hosts|num_hosts
+oracle_emrep|No_Agents|Active Agents|Number of Active Agents 
+oracle_emrep|NotifPerformance|Notification Delivery Performance|Average Notification Time (seconds)  
+oracle_emrep|NotifPerformance|Notification Delivery Performance|Notification Processing Time (% of Last Hour)  
+oracle_emrep|NotifPerformance|Notification Delivery Performance|Notifications Processed (Last Hour)  
+oracle_emrep|NotifPerformance|Notification Delivery Performance|Pending Notifications Count  
+oracle_emrep|Notification_Status|Notification Status|Notification UpDown   
+oracle_emrep|OverallPagePerformance|Overall Page Performance|Page Accesses (per 10 min) 
+oracle_emrep|OverallPagePerformance|Overall Page Performance|Page Processing Time (sec) 
+oracle_emrep|OverallPagePerformance|Overall Page Performance|Page Processing Time in OMS (sec)   
+oracle_emrep|OverallPagePerformance|Overall Page Performance|Page Processing Time in Repository (sec)
+oracle_emrep|OverallPagePerformance|Overall Page Performance|Processing Time in Browser/Network for Multi-Requests Page (sec)
+oracle_emrep|OverallPagePerformance|Overall Page Performance|SQL/PLSQL Executions (per 10 min)   
+oracle_emrep|Overall_Status|Overall Status|Overall Backoff Requests in the Last 10 Mins 
+oracle_emrep|Overall_Status|Overall Status|Overall Rows Processed by Loader in the Last Hour 
+oracle_emrep|Overall_Status|Overall Status|Overall Upload Backlog (Files)  
+oracle_emrep|Overall_Status|Overall Status|Overall Upload Backlog (MB) 
+oracle_emrep|Overall_Status|Overall Status|Overall Upload Rate (MB/sec)
+oracle_emrep|Overall_Status|Overall Status|Unmonitored Targets (%) 
+oracle_emrep|PagePerformance|Page Performance|Page Accesses (per 10 min)   
+oracle_emrep|PagePerformance|Page Performance|Page Processing Time (sec)   
+oracle_emrep|PagePerformance|Page Performance|Page Processing Time in OMS (sec) 
+oracle_emrep|PagePerformance|Page Performance|Page Processing Time in Repository (sec)  
+oracle_emrep|PagePerformance|Page Performance|Processing Time in Browser/Network for Multi-Requests Page (sec) 
+oracle_emrep|PagePerformance|Page Performance|Requests per Page  
+oracle_emrep|PagePerformance|Page Performance|SQL/PLSQL executions for Page Processing  
+oracle_emrep|Repo_Collection_Performance|Repository Collection Performance|Average Collection Duration(Seconds)
+oracle_emrep|Repo_Collection_Performance|Repository Collection Performance|Estimated time for clearing current Collections backlog (Mins)
+oracle_emrep|Repo_Collection_Performance|Repository Collection Performance|Number of Collections In Backlog
+oracle_emrep|Repo_Collection_Performance|Repository Collection Performance|Number of Collections Processed 
+oracle_emrep|Repo_Collection_Performance|Repository Collection Performance|Number of Workers 
+oracle_emrep|Repo_Collection_Performance|Repository Collection Performance|Throughput Per Second 
+oracle_emrep|Repository_Job_Dispatcher|Repository Job Scheduler Performance|Average number of steps marked as ready by the scheduler 
+oracle_emrep|Repository_Job_Dispatcher|Repository Job Scheduler Performance|Estimated time for clearing current Job steps backlog (Mins) 
+oracle_emrep|Repository_Job_Dispatcher|Repository Job Scheduler Performance|Job Step Backlog 
+oracle_emrep|Repository_Job_Dispatcher|Repository Job Scheduler Performance|Latency in marking steps as ready by the scheduler   
+oracle_emrep|Repository_Job_Dispatcher|Repository Job Scheduler Performance|Overall Job Steps per Second 
+oracle_emrep|Repository_Job_Dispatcher|Repository Job Scheduler Performance|Step Scheduler cycles (per minute) 
+oracle_emrep|Response|Response|Status 
+oracle_emrep|Rollup_Performance|Metric Rollup Performance|Duration(Mins)   
+oracle_emrep|Rollup_Performance|Metric Rollup Performance|Number of Records Rolled Up   
+oracle_emrep|Rollup_Performance|Metric Rollup Performance|Throughput Per Minute 
+oracle_emrep|UsageSummary_AgtTimingDynProps|Usage Summary : Agent Timing for Dynamic Properties|Average Seconds per Evaluation   
+oracle_emrep|UsageSummary_AgtTimingDynProps|Usage Summary : Agent Timing for Dynamic Properties|Maximum Seconds per Evaluation   
+oracle_emrep|UsageSummary_AgtTimingDynProps|Usage Summary : Agent Timing for Dynamic Properties|Number of Evaluations
+oracle_emrep|UsageSummary_AgtTimingDynProps|Usage Summary : Agent Timing for Dynamic Properties|Number of Seconds  
+oracle_emrep|UsageSummary_AgtTimingDynProps|Usage Summary : Agent Timing for Dynamic Properties|Rank by Total Seconds
+oracle_emrep|UsageSummary_ComplianceByTgtType|Usage Summary : Compliance By Target Type|% of Total Evals 
+oracle_emrep|UsageSummary_ComplianceByTgtType|Usage Summary : Compliance By Target Type|Number of Evals  
+oracle_emrep|UsageSummary_ComplianceByTgtType|Usage Summary : Compliance By Target Type|Number of Msecs  
+oracle_emrep|UsageSummary_ComplianceByTgtType|Usage Summary : Compliance By Target Type|Number of Targets
+oracle_emrep|UsageSummary_ComplianceByTgtType|Usage Summary : Compliance By Target Type|Rank by Total Evals
+oracle_emrep|UsageSummary_ComplianceByType|Usage Summary : Compliance By Type|% of Total Evals   
+oracle_emrep|UsageSummary_ComplianceByType|Usage Summary : Compliance By Type|Number of Evals
+oracle_emrep|UsageSummary_ComplianceByType|Usage Summary : Compliance By Type|Number of MSecs
+oracle_emrep|UsageSummary_ComplianceByType|Usage Summary : Compliance By Type|Rank by Total Evals
+oracle_emrep|UsageSummary_ComplianceTopTgts|Usage Summary : Compliance Top Targets|Multiple of Avg Evals 
+oracle_emrep|UsageSummary_ComplianceTopTgts|Usage Summary : Compliance Top Targets|Number of Evals   
+oracle_emrep|UsageSummary_ComplianceTopTgts|Usage Summary : Compliance Top Targets|Number of Msecs   
+oracle_emrep|UsageSummary_ComplianceTopTgts|Usage Summary : Compliance Top Targets|Rank by Total Evals   
+oracle_emrep|UsageSummary_Compliance|Usage Summary : Compliance|Number of Evals 
+oracle_emrep|UsageSummary_Compliance|Usage Summary : Compliance|Number of MSecs 
+oracle_emrep|UsageSummary_Compliance|Usage Summary : Compliance|Number of Targets  
+oracle_emrep|UsageSummary_EventsByTgtType|Usage Summary : Events By Target Type|% of Total Events
+oracle_emrep|UsageSummary_EventsByTgtType|Usage Summary : Events By Target Type|Number of Events 
+oracle_emrep|UsageSummary_EventsByTgtType|Usage Summary : Events By Target Type|Number of Sequences  
+oracle_emrep|UsageSummary_EventsByTgtType|Usage Summary : Events By Target Type|Number of Targets
+oracle_emrep|UsageSummary_EventsByTgtType|Usage Summary : Events By Target Type|Rank by Total Events 
+oracle_emrep|UsageSummary_EventsByType|Usage Summary : Events By Type|% of Total Events 
+oracle_emrep|UsageSummary_EventsByType|Usage Summary : Events By Type|Number of Events  
+oracle_emrep|UsageSummary_EventsByType|Usage Summary : Events By Type|Number of Sequences    
+oracle_emrep|UsageSummary_EventsByType|Usage Summary : Events By Type|Rank by Total Events   
+oracle_emrep|UsageSummary_EventsTopTgts|Usage Summary : Events Top Targets|Multiple of Avg Events
+oracle_emrep|UsageSummary_EventsTopTgts|Usage Summary : Events Top Targets|Number of Events  
+oracle_emrep|UsageSummary_EventsTopTgts|Usage Summary : Events Top Targets|Number of Sequences   
+oracle_emrep|UsageSummary_EventsTopTgts|Usage Summary : Events Top Targets|Rank by Total Events  
+oracle_emrep|UsageSummary_Events|Usage Summary : Events|Number of Events   
+oracle_emrep|UsageSummary_Events|Usage Summary : Events|Number of Sequences
+oracle_emrep|UsageSummary_Events|Usage Summary : Events|Number of Targets  
+oracle_emrep|UsageSummary_JobsByOwner|Usage Summary : Jobs By Owner|% of Total MSecs
+oracle_emrep|UsageSummary_JobsByOwner|Usage Summary : Jobs By Owner|Number of Execs
+oracle_emrep|UsageSummary_JobsByOwner|Usage Summary : Jobs By Owner|Number of MSecs
+oracle_emrep|UsageSummary_JobsByOwner|Usage Summary : Jobs By Owner|Rank by Total MSecs 
+oracle_emrep|UsageSummary_JobsByType|Usage Summary : Jobs By Type|% of Total MSecs 
+oracle_emrep|UsageSummary_JobsByType|Usage Summary : Jobs By Type|Number of Execs  
+oracle_emrep|UsageSummary_JobsByType|Usage Summary : Jobs By Type|Number of MSecs  
+oracle_emrep|UsageSummary_JobsByType|Usage Summary : Jobs By Type|Rank by Total MSecs   
+oracle_emrep|UsageSummary_Jobs|Usage Summary : Jobs|Number of Execs
+oracle_emrep|UsageSummary_Jobs|Usage Summary : Jobs|Number of MSecs
+oracle_emrep|UsageSummary_MetricsByGroup|Usage Summary : Metrics By Group|% of Total Bytes   
+oracle_emrep|UsageSummary_MetricsByGroup|Usage Summary : Metrics By Group|Number of Bytes    
+oracle_emrep|UsageSummary_MetricsByGroup|Usage Summary : Metrics By Group|Number of Collections  
+oracle_emrep|UsageSummary_MetricsByGroup|Usage Summary : Metrics By Group|Number of MSecs    
+oracle_emrep|UsageSummary_MetricsByGroup|Usage Summary : Metrics By Group|Number of Rows
+oracle_emrep|UsageSummary_MetricsByGroup|Usage Summary : Metrics By Group|Number of Targets  
+oracle_emrep|UsageSummary_MetricsByGroup|Usage Summary : Metrics By Group|Rank by Total Bytes
+oracle_emrep|UsageSummary_MetricsByTgtType|Usage Summary : Metrics By Target Type|% of Total Bytes   
+oracle_emrep|UsageSummary_MetricsByTgtType|Usage Summary : Metrics By Target Type|Number of Bytes
+oracle_emrep|UsageSummary_MetricsByTgtType|Usage Summary : Metrics By Target Type|Number of Collections  
+oracle_emrep|UsageSummary_MetricsByTgtType|Usage Summary : Metrics By Target Type|Number of MSecs
+oracle_emrep|UsageSummary_MetricsByTgtType|Usage Summary : Metrics By Target Type|Number of Rows 
+oracle_emrep|UsageSummary_MetricsByTgtType|Usage Summary : Metrics By Target Type|Number of Targets  
+oracle_emrep|UsageSummary_MetricsByTgtType|Usage Summary : Metrics By Target Type|Rank by Total Bytes
+oracle_emrep|UsageSummary_MetricsTopTgts|Usage Summary : Metrics Top Targets|Multiple of Avg Bytes   
+oracle_emrep|UsageSummary_MetricsTopTgts|Usage Summary : Metrics Top Targets|Number of Bytes 
+oracle_emrep|UsageSummary_MetricsTopTgts|Usage Summary : Metrics Top Targets|Number of Collections   
+oracle_emrep|UsageSummary_MetricsTopTgts|Usage Summary : Metrics Top Targets|Number of MSecs 
+oracle_emrep|UsageSummary_MetricsTopTgts|Usage Summary : Metrics Top Targets|Number of Rows  
+oracle_emrep|UsageSummary_MetricsTopTgts|Usage Summary : Metrics Top Targets|Rank by Total Bytes 
+oracle_emrep|UsageSummary_Metrics|Usage Summary : Metrics|Number of Bytes  
+oracle_emrep|UsageSummary_Metrics|Usage Summary : Metrics|Number of Collections 
+oracle_emrep|UsageSummary_Metrics|Usage Summary : Metrics|Number of MSecs  
+oracle_emrep|UsageSummary_Metrics|Usage Summary : Metrics|Number of Rows   
+oracle_emrep|UsageSummary_Metrics|Usage Summary : Metrics|Number of Targets
+oracle_emrep|UsageSummary_NotifsBreakup|Usage Summary : Notifications Breakup|Number of MSecs in Device  
+oracle_emrep|UsageSummary_NotifsBreakup|Usage Summary : Notifications Breakup|Number of MSecs in Framework 
+oracle_emrep|UsageSummary_NotifsBreakup|Usage Summary : Notifications Breakup|Number of Notifications
+oracle_emrep|UsageSummary_Notifs|Usage Summary : Notifications|Number of MSecs in Device
+oracle_emrep|UsageSummary_Notifs|Usage Summary : Notifications|Number of MSecs in Framework  
+oracle_emrep|UsageSummary_Notifs|Usage Summary : Notifications|Number of Notifications  
+oracle_emrep|UsageSummary_TasksByType|Usage Summary : Tasks By Type|% of Total MSecs
+oracle_emrep|UsageSummary_TasksByType|Usage Summary : Tasks By Type|Number of Secs 
+oracle_emrep|UsageSummary_TasksByType|Usage Summary : Tasks By Type|Number of Targets   
+oracle_emrep|UsageSummary_TasksByType|Usage Summary : Tasks By Type|Number of Task Executions
+oracle_emrep|UsageSummary_TasksByType|Usage Summary : Tasks By Type|Rank by Total Secs  
+oracle_emrep|UsageSummary_Tasks|Usage Summary : Tasks|Number of Secs   
+oracle_emrep|UsageSummary_Tasks|Usage Summary : Tasks|Number of Targets
+oracle_emrep|UsageSummary_Tasks|Usage Summary : Tasks|Number of Tasks Executed
+oracle_emrep|metric_alerts_per_day|Metric Alerts Per Day|Number of Closed Metric Alerts 
+oracle_emrep|metric_alerts_per_day|Metric Alerts Per Day|Number of Metric Alerts Backlogged  
+oracle_emrep|metric_alerts_per_day|Metric Alerts Per Day|Number of Opened Metric Alerts 
+oracle_emrep|metric_errors_closed|Metric Collection Errors Cleared(Per Day)|Number Of Errors Cleared 
+oracle_emrep|metric_errors_reported|Metric Collection Errors Reported(Per Day)|Number Of Errors Reported 
+oracle_emrep|pending_monitoring_jobs|Pending Monitoring Jobs|Pending Metric Extension Deployments
+oracle_emrep|pending_monitoring_jobs|Pending Monitoring Jobs|Pending Template Applies   
+oracle_emrep|repository_metric_task_perf|Repository Collection Task Performance|Run Duration(Seconds)
+oracle_emrep|repository_operator_status|Repository Operation Status|Long Running Metric Collection Status
+oracle_emrep|repository_operator_status|Repository Operation Status|Repository Job Scheduler Status  
+oracle_emrep|repository_operator_status|Repository Operation Status|Short Running Metric Collection Status 
+oracle_listener|General Status|General Status|Alias  
+oracle_listener|General Status|General Status|SID List   
+oracle_listener|General Status|General Status|SNMP Status
+oracle_listener|General Status|General Status|Security   
+oracle_listener|General Status|General Status|Start Date 
+oracle_listener|General Status|General Status|TNS Address
+oracle_listener|General Status|General Status|Trace Level
+oracle_listener|General Status|General Status|Version
+oracle_listener|Load|Load|Connections Established    
+ 
+ 
+oracle_listener|Load|Load|Connections Refused (per   
+ 
+ 
+oracle_listener|Response|Response|Response Time (msec)   
+oracle_listener|Response|Response|Status
+oracle_listener|TNS_ERRORS|TNS Errors|TNSMsg
+oracle_oms_console|Repository_sessions|Repository Sessions|Repository Session Count
+oracle_oms_console|Response|Response|Status
+oracle_oms_pbs|Repository_sessions|Repository Sessions|Repository Session Count 
+oracle_oms_pbs|Response|Response|Status 
+oracle_oms|EventStatus|Event Status|Average Event Processing Time (Seconds)
+
+TARGET_TYPE||'|'||METRIC_NAME||'|'||METRIC_LABEL||'|'||COLUMN_LABEL
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+oracle_oms|EventStatus|Event Status|Event Coordinator Status 
+oracle_oms|EventStatus|Event Status|Event System UpDown  
+oracle_oms|EventStatus|Event Status|Queues Not Being Processed   
+oracle_oms|EventStatus|Event Status|Total Events Pending 
+oracle_oms|EventStatus|Event Status|Total Events Processed (Last Hour) 
+oracle_oms|Job_Dispatcher_Performance|Job Dispatcher Performance|Dispatcher cycles (per minute)  
+oracle_oms|Job_Dispatcher_Performance|Job Dispatcher Performance|Free threads for internal steps 
+oracle_oms|Job_Dispatcher_Performance|Job Dispatcher Performance|Free threads for system critical job steps
+oracle_oms|Job_Dispatcher_Performance|Job Dispatcher Performance|Free threads for system normal job steps
+oracle_oms|Job_Dispatcher_Performance|Job Dispatcher Performance|Free threads for user long job steps
+oracle_oms|Job_Dispatcher_Performance|Job Dispatcher Performance|Free threads for user short job steps   
+oracle_oms|Job_Dispatcher_Performance|Job Dispatcher Performance|Job Dispatcher Processing Time (%)  
+oracle_oms|Job_Dispatcher_Performance|Job Dispatcher Performance|Job Steps Processed (per minute)
+oracle_oms|Job_Dispatcher_Performance|Job Dispatcher Performance|Throughput for internal steps (per minute)
+oracle_oms|Job_Dispatcher_Performance|Job Dispatcher Performance|Throughput for system critical job steps (per minute)  
+oracle_oms|Job_Dispatcher_Performance|Job Dispatcher Performance|Throughput for system normal job steps (per minute) 
+oracle_oms|Job_Dispatcher_Performance|Job Dispatcher Performance|Throughput for user long job steps (per minute)   
+oracle_oms|Job_Dispatcher_Performance|Job Dispatcher Performance|Throughput for user short job steps (per minute)  
+oracle_oms|Management_Loader_Status|Active Loader Status|Loader Backoff Count (per hour)
+oracle_oms|Management_Loader_Status|Active Loader Status|Loader Throughput (rows per second) 
+oracle_oms|Management_Loader_Status|Active Loader Status|Rows Processed in the Last Hour
+oracle_oms|Management_Loader_Status|Active Loader Status|Total Loader Runtime in the Last Hour (seconds) 
+oracle_oms|Management_Servlet_Status|Active Management Servlets|Notifications Processed 
+oracle_oms|Management_Servlet_Status|Active Management Servlets|Page Hits (per minute)  
+oracle_oms|Response|Response|Status   
+oracle_oms|adrAlertLogIncidentError|Incident|Alert Log Error Trace File
+oracle_oms|adrAlertLogIncidentError|Incident|Alert Log Name  
+oracle_oms|adrAlertLogIncidentError|Incident|Diagnostic Incident 
+oracle_oms|adrAlertLogIncidentError|Incident|ECID    
+oracle_oms|adrAlertLogIncidentError|Incident|Impact  
+oracle_oms|adrAlertLogIncidentError|Incident|Incident ID 
+oracle_vm_cloud|GvmMacConflicts|Guest VM MAC address conflicts|Number of Guest VM MAC address conflict   
+osm_cluster|ACFS_State|ASM Cluster File System State|ASM Cluster File System Availability    
+osm_cluster|ACFS_State|ASM Cluster File System State|ASM Cluster File System Available Time  
+osm_cluster|ACFS_State|ASM Cluster File System State|ASM Cluster File System Mount Point
+osm_cluster|ACFS_State|ASM Cluster File System State|ASM Cluster File System Mount State
+osm_cluster|Database_DiskGroup_Usage|Database Disk Group Usage|Total Bytes 
+osm_cluster|DiskGroup_Usage|Disk Group Usage|Disk Group Free (MB)
+osm_cluster|DiskGroup_Usage|Disk Group Usage|Disk Group Usable (MB)
+osm_cluster|DiskGroup_Usage|Disk Group Usage|Disk Group Usable Free (MB)   
+osm_cluster|DiskGroup_Usage|Disk Group Usage|Disk Group Used %   
+osm_cluster|DiskGroup_Usage|Disk Group Usage|Redundancy  
+osm_cluster|DiskGroup_Usage|Disk Group Usage|Size (MB)   
+osm_cluster|DiskGroup_Usage|Disk Group Usage|Used % of Safely Usable   
+osm_cluster|Disk_Path|Disk Path|Disk Name  
+osm_cluster|Disk_Path|Disk Path|Disk Path  
+osm_cluster|Disk_Path|Disk Path|Group Name 
+osm_cluster|Instance_Disk_Performance|Instance Disk Performance|Bytes Read 
+osm_cluster|Instance_Disk_Performance|Instance Disk Performance|Bytes Written
+osm_cluster|Instance_Disk_Performance|Instance Disk Performance|Last Read Errors
+osm_cluster|Instance_Disk_Performance|Instance Disk Performance|Read Errors
+osm_cluster|Instance_Disk_Performance|Instance Disk Performance|Read Response Time (MS) 
+osm_cluster|Instance_Disk_Performance|Instance Disk Performance|Read Time (MS)
+osm_cluster|Instance_Disk_Performance|Instance Disk Performance|Reads  
+osm_cluster|Instance_Disk_Performance|Instance Disk Performance|Response Time (MS) 
+osm_cluster|Instance_Disk_Performance|Instance Disk Performance|Total I/O Time (MS)
+osm_cluster|Instance_Disk_Performance|Instance Disk Performance|Write Errors 
+osm_cluster|Instance_Disk_Performance|Instance Disk Performance|Write Response Time (MS)
+osm_cluster|Instance_Disk_Performance|Instance Disk Performance|Write Time (MS) 
+osm_cluster|Instance_Disk_Performance|Instance Disk Performance|Writes 
+osm_cluster|Instance_Diskgroup_Database_Performance|Instance Diskgroup Database Performance|Bytes Read   
+osm_cluster|Instance_Diskgroup_Database_Performance|Instance Diskgroup Database Performance|Bytes Written
+osm_cluster|Instance_Diskgroup_Database_Performance|Instance Diskgroup Database Performance|Read Time (MS) 
+osm_cluster|Instance_Diskgroup_Database_Performance|Instance Diskgroup Database Performance|Reads
+osm_cluster|Instance_Diskgroup_Database_Performance|Instance Diskgroup Database Performance|Write Time (MS)
+osm_cluster|Instance_Diskgroup_Database_Performance|Instance Diskgroup Database Performance|Writes   
+osm_cluster|Instance_Diskgroup_Performance|Instance Diskgroup Performance|Bytes Read
+osm_cluster|Instance_Diskgroup_Performance|Instance Diskgroup Performance|Bytes Written 
+osm_cluster|Instance_Diskgroup_Performance|Instance Diskgroup Performance|Read Time (MS)
+osm_cluster|Instance_Diskgroup_Performance|Instance Diskgroup Performance|Reads 
+osm_cluster|Instance_Diskgroup_Performance|Instance Diskgroup Performance|Write Time (MS)    
+osm_cluster|Instance_Diskgroup_Performance|Instance Diskgroup Performance|Writes
+osm_cluster|Single_Instance_OFS_Summary|ASM Cluster File System|Corrupt
+osm_cluster|Single_Instance_OFS_Summary|ASM Cluster File System|Disk Group Allocated Space (GB)  
+osm_cluster|Single_Instance_OFS_Summary|ASM Cluster File System|Free (GB)  
+osm_cluster|Single_Instance_OFS_Summary|ASM Cluster File System|Size (GB)  
+osm_cluster|Single_Instance_OFS_Summary|ASM Cluster File System|Used (%)   
+osm_cluster|Single_Instance_OFS_Summary|ASM Cluster File System|Used (GB)  
+osm_cluster|Single_Instance_OFS_Summary|ASM Cluster File System|Used (MB)  
+osm_cluster|Single_Instance_OFS_Summary|ASM Cluster File System|Volume Name
+osm_cluster|Volumes_Summary|ASM Volumes|Disk Group Allocated Space (GB)
+osm_cluster|Volumes_Summary|ASM Volumes|Redundancy   
+osm_cluster|Volumes_Summary|ASM Volumes|Size (GB)    
+osm_cluster|Volumes_Summary|ASM Volumes|Usage   
+osm_cluster|Volumes_Summary|ASM Volumes|Volume Name  
+osm_cluster|disk_status_rollup|Offline Disk Count|Offline Disk Count   
+osm_cluster|disk_status|Disk Status|Disk Mode Status 
+osm_cluster|diskgroup_fg_imbalance|Failure Group Imbalance Status|Disk Count Imbalance Variance  
+osm_cluster|diskgroup_fg_imbalance|Failure Group Imbalance Status|Disk Size Imbalance (%)    
+osm_cluster|diskgroup_fg_imbalance|Failure Group Imbalance Status|Failure Group Count   
+osm_cluster|diskgroup_imbalance|Disk Group Imbalance Status|Actual Imbalance (%)
+osm_cluster|diskgroup_imbalance|Disk Group Imbalance Status|Actual Minimum Percent Free 
+osm_cluster|diskgroup_imbalance|Disk Group Imbalance Status|Disk Count 
+osm_cluster|diskgroup_imbalance|Disk Group Imbalance Status|Disk Group Imbalance (%) without Rebalance   
+osm_cluster|diskgroup_imbalance|Disk Group Imbalance Status|Disk Maximum Used (%) with Rebalance 
+osm_cluster|diskgroup_imbalance|Disk Group Imbalance Status|Disk Minimum Free (%) without Rebalance  
+osm_cluster|diskgroup_imbalance|Disk Group Imbalance Status|Disk Size Variance (%) 
+osm_cluster|diskgroup_imbalance|Disk Group Imbalance Status|Rebalance In Progress  
+osm_cluster|diskgroup_imbalance|Disk Group Imbalance Status|Resync In Progress
+osm_cluster|unavailable_failure_group|Failure Group Status|Available Disks 
+osm_cluster|unavailable_failure_group|Failure Group Status|Online Disk Count for Failure Group with more than 1 Disk 
+osm_cluster|unavailable_failure_group|Failure Group Status|Total Disks 
+osm_instance|DiskGroup_Status|Disk Group Status|State
+osm_instance|Instance_Volumes_Summary|ASM Volumes Instance Information|Mount Point 
+osm_instance|Instance_Volumes_Summary|ASM Volumes Instance Information|Status
+osm_instance|Response|Response|Status 
+osm_instance|adrAlertLogCheckerFailure|Checker Failure|Alert Log Name  
+osm_instance|adrAlertLogCheckerFailure|Checker Failure|Checker Failure Detected 
+osm_instance|adrAlertLogCheckerFailure|Checker Failure|Number of Failures  
+osm_instance|adrAlertLogIncidentError|Incident|ASM Block Corruption
+osm_instance|adrAlertLogIncidentError|Incident|Access Violation  
+osm_instance|adrAlertLogIncidentError|Incident|Alert Log Error Trace File  
+osm_instance|adrAlertLogIncidentError|Incident|Alert Log Name
+osm_instance|adrAlertLogIncidentError|Incident|Cluster Error 
+osm_instance|adrAlertLogIncidentError|Incident|Deadlock  
+osm_instance|adrAlertLogIncidentError|Incident|ECID  
+osm_instance|adrAlertLogIncidentError|Incident|File Access Error 
+osm_instance|adrAlertLogIncidentError|Incident|Generic Incident  
+osm_instance|adrAlertLogIncidentError|Incident|Generic Internal Error  
+osm_instance|adrAlertLogIncidentError|Incident|Impact
+osm_instance|adrAlertLogIncidentError|Incident|Incident ID   
+osm_instance|adrAlertLogIncidentError|Incident|Internal SQL Error
+osm_instance|adrAlertLogIncidentError|Incident|Out of Memory 
+osm_instance|adrAlertLogIncidentError|Incident|Redo Log Corruption 
+osm_instance|adrAlertLogIncidentError|Incident|Session Terminated
+osm_instance|incident_meter|incident_meter|critical_incidents
+osm_instance|incident_meter|incident_meter|severity_index
+osm_instance|incident_meter|incident_meter|warning_incidents 
+rac_database|DATABASE_SIZE|Database Size|Allocated Space(GB) 
+rac_database|DATABASE_SIZE|Database Size|Used Space(GB)  
+rac_database|DGPrimaryDBName|DGPrimaryDBName|db_name 
+rac_database|DeferredTrans|Deferred Transactions|Deferred Transaction Count
+rac_database|DeferredTrans|Deferred Transactions|Deferred Transaction Error Count  
+rac_database|ME$Last_full_backup_cluster_db|Last full backup cluster db|Days since backup    
+rac_database|ME$Last_full_backup_cluster_db|Last full backup cluster db|Last backup
+rac_database|ME$datafile_offline_clusterdb|datafile_offline_clusterdb|status 
+rac_database|Recovery_Area|Recovery Area|Recovery Area Free Space (%)  
+rac_database|Temporary_File_Status|Temporary File Status|File Name 
+rac_database|Temporary_File_Status|Temporary File Status|Status  
+rac_database|UserBlock|User Block|Blocking Session Count 
+rac_database|UserLocks|User Locks|Maximum Blocked DB Time (seconds)
+rac_database|UserLocks|User Locks|Maximum Blocked Session Count  
+rac_database|addm_report_database|ADDM Report - Global|Report1   
+rac_database|addm_report_database|ADDM Report - Global|Report10  
+rac_database|addm_report_database|ADDM Report - Global|Report11  
+rac_database|addm_report_database|ADDM Report - Global|Report12  
+rac_database|addm_report_database|ADDM Report - Global|Report13  
+rac_database|addm_report_database|ADDM Report - Global|Report14  
+rac_database|addm_report_database|ADDM Report - Global|Report15  
+rac_database|addm_report_database|ADDM Report - Global|Report16  
+rac_database|addm_report_database|ADDM Report - Global|Report2   
+rac_database|addm_report_database|ADDM Report - Global|Report3   
+rac_database|addm_report_database|ADDM Report - Global|Report4   
+rac_database|addm_report_database|ADDM Report - Global|Report5   
+rac_database|addm_report_database|ADDM Report - Global|Report6   
+rac_database|addm_report_database|ADDM Report - Global|Report7   
+rac_database|addm_report_database|ADDM Report - Global|Report8   
+rac_database|addm_report_database|ADDM Report - Global|Report9   
+rac_database|apply_coord|Streams Apply Coordinator Statistics|Rate of  Transactions Applied(per Sec) 
+rac_database|apply_coord|Streams Apply Coordinator Statistics|Rate of  Transactions Assigned(per Sec)
+rac_database|apply_coord|Streams Apply Coordinator Statistics|Rate of Transactions Received(per Sec) 
+rac_database|apply_coord|Streams Apply Coordinator Statistics|Total Number of Transactions Assigned  
+rac_database|apply_coord|Streams Apply Coordinator Statistics|Total Number of Transactions Received  
+rac_database|apply_coord|Streams Apply Coordinator Statistics|Total number of Transactions applied   
+rac_database|apply_queue_buffq|Streams Apply Queue - Buffered |Apply Queue - Cumulative Number of Messages 
+rac_database|apply_queue_buffq|Streams Apply Queue - Buffered |Apply Queue - Cumulative Number of Spilled Messages 
+rac_database|apply_queue_buffq|Streams Apply Queue - Buffered |Apply Queue - Number of Messages  
+rac_database|apply_queue_buffq|Streams Apply Queue - Buffered |Apply Queue - Number of Spilled Messages  
+rac_database|apply_queue_buffq|Streams Apply Queue - Buffered |Streams Apply - (%)Cumulative Spilled Messages  
+rac_database|apply_queue_buffq|Streams Apply Queue - Buffered |Streams Apply - (%)Spilled Messages   
+rac_database|apply_reader|Streams Apply Reader Statistics|Rate at which messages are being dequeued(per Sec)   
+rac_database|apply_reader|Streams Apply Reader Statistics|Rate at which messages are getting spilled(per Sec)  
+rac_database|apply_reader|Streams Apply Reader Statistics|Total number of Messages Dequeued  
+rac_database|apply_reader|Streams Apply Reader Statistics|Total number of Spilled Messages   
+rac_database|aq_buff_queue_space_usage|Space usage by buffered queues|Allocated Streams pool size (MB)   
+rac_database|aq_buff_queue_space_usage|Space usage by buffered queues|Buffered queue space usage wrt streams pool size (%)   
+rac_database|aq_buff_queue_space_usage|Space usage by buffered queues|Instance Name
+rac_database|aq_buff_queue_space_usage|Space usage by buffered queues|Queue size (MB)   
+rac_database|aq_msgs_per_buffered_queue_per_subscriber|Messages per buffered queue per subscriber|Average age of messages/buffered queue/subscriber (seconds) 
+rac_database|aq_msgs_per_buffered_queue_per_subscriber|Messages per buffered queue per subscriber|First message age in buffered queue/subscriber (Seconds)
+rac_database|aq_msgs_per_buffered_queue_per_subscriber|Messages per buffered queue per subscriber|Messages processed/buffered queue/subscriber (%) 
+rac_database|aq_msgs_per_buffered_queue_per_subscriber|Messages per buffered queue per subscriber|Messages processed/buffered queue/subscriber per minute (%) 
+rac_database|aq_msgs_per_buffered_queue_per_subscriber|Messages per buffered queue per subscriber|Total messages processed/buffered queue/subscriber per minute 
+rac_database|aq_msgs_per_buffered_queue_per_subscriber|Messages per buffered queue per subscriber|Total messages received/buffered queue/subscriber per minute
+rac_database|aq_msgs_per_buffered_queue_per_subscriber|Messages per buffered queue per subscriber|Total number of messages processed 
+rac_database|aq_msgs_per_buffered_queue_per_subscriber|Messages per buffered queue per subscriber|Total number of messages received  
+rac_database|aq_msgs_per_buffered_queue|Messages per buffered queue|Average age of messages per buffered queue (seconds)
+rac_database|aq_msgs_per_buffered_queue|Messages per buffered queue|First Message Age in Buffered Queue Per Queue (Seconds)  
+rac_database|aq_msgs_per_buffered_queue|Messages per buffered queue|Messages processed per buffered queue (%)  
+rac_database|aq_msgs_per_buffered_queue|Messages per buffered queue|Messages processed per buffered queue (%) per minute
+rac_database|aq_msgs_per_buffered_queue|Messages per buffered queue|Spilled Messages
+rac_database|aq_msgs_per_buffered_queue|Messages per buffered queue|Total Messages Processed per Buffered Queue per Minute   
+rac_database|aq_msgs_per_buffered_queue|Messages per buffered queue|Total Messages Received per Buffered Queue per Minute    
+rac_database|aq_msgs_per_buffered_queue|Messages per buffered queue|Total number of messages processed   
+rac_database|aq_msgs_per_buffered_queue|Messages per buffered queue|Total number of messages received
+rac_database|aq_msgs_per_persistent_queue_per_subscriber|Messages per persistent queue per subscriber|Average age of messages/persistent queue/subscriber (seconds)
+rac_database|aq_msgs_per_persistent_queue_per_subscriber|Messages per persistent queue per subscriber|First Message Age in Persistent Queue/Subscriber (seconds)
+rac_database|aq_msgs_per_persistent_queue_per_subscriber|Messages per persistent queue per subscriber|Messages processed/persistent queue/subscriber (%)  
+rac_database|aq_msgs_per_persistent_queue_per_subscriber|Messages per persistent queue per subscriber|Messages processed/persistent queue/subscriber per minute (%)
+rac_database|aq_msgs_per_persistent_queue_per_subscriber|Messages per persistent queue per subscriber|Total messages processed/persistent queue/subscriber per minute   
+rac_database|aq_msgs_per_persistent_queue_per_subscriber|Messages per persistent queue per subscriber|Total messages received/persistent queue/subscriber per minute    
+rac_database|aq_msgs_per_persistent_queue_per_subscriber|Messages per persistent queue per subscriber|Total number of messages processed 
+rac_database|aq_msgs_per_persistent_queue_per_subscriber|Messages per persistent queue per subscriber|Total number of messages received  
+rac_database|aq_msgs_per_persistent_queue|Messages per persistent queue|Age of the first message in persistent queue per queue (seconds) 
+rac_database|aq_msgs_per_persistent_queue|Messages per persistent queue|Average age of messages per persistent queue (seconds)   
+rac_database|aq_msgs_per_persistent_queue|Messages per persistent queue|Messages processed per persistent queue (%)
+rac_database|aq_msgs_per_persistent_queue|Messages per persistent queue|Messages processed per persistent queue (%) per minute   
+rac_database|aq_msgs_per_persistent_queue|Messages per persistent queue|Total Messages Processed per Persistent Queue per Minute 
+rac_database|aq_msgs_per_persistent_queue|Messages per persistent queue|Total Messages Received per Persistent Queue per Minute  
+rac_database|aq_msgs_per_persistent_queue|Messages per persistent queue|Total number of messages processed 
+rac_database|aq_msgs_per_persistent_queue|Messages per persistent queue|Total number of messages received
+rac_database|archFull|Archive Area|Archive Area Used (%) 
+rac_database|archFull|Archive Area|Archive Area Used (KB)
+rac_database|archFull|Archive Area|Free Archive Area (KB)
+rac_database|archFull|Archive Area|Total Archive Area (KB)   
+rac_database|audit_failed_logins2|Failed Logins|Failed Login Count 
+rac_database|audit_failed_logins_historical|Failed Logins (Historical)|Failed Login Count    
+rac_database|capture_message|Streams Capture Message Statistics|Message Capture Rate(per Sec)
+rac_database|capture_message|Streams Capture Message Statistics|Messages Enqueue Rate(per Sec)   
+rac_database|capture_message|Streams Capture Message Statistics|Total Messages Captured 
+rac_database|capture_message|Streams Capture Message Statistics|Total Messages Enqueued 
+rac_database|capture_queue|Streams Capture Queue Statistics|Capture Queue - Cumulative Number of Messages
+rac_database|capture_queue|Streams Capture Queue Statistics|Capture Queue - Cumulative Number of Spilled Messages  
+rac_database|capture_queue|Streams Capture Queue Statistics|Capture Queue - Number of Messages   
+rac_database|capture_queue|Streams Capture Queue Statistics|Capture Queue - Number of Spilled Messages   
+rac_database|capture_queue|Streams Capture Queue Statistics|Streams Capture - (%)Cumulative Spilled Messages   
+rac_database|capture_queue|Streams Capture Queue Statistics|Streams Capture - (%)Spilled Messages
+rac_database|dataguard_fsfo|Data Guard Fast-Start Failover|Fast-Start Failover Occurred 
+rac_database|dataguard_fsfo|Data Guard Fast-Start Failover|Fast-Start Failover SCN 
+rac_database|dataguard_fsfo|Data Guard Fast-Start Failover|Fast-Start Failover Status   
+rac_database|dataguard_fsfo|Data Guard Fast-Start Failover|Fast-Start Failover Time
+rac_database|dataguard_pperf|Data Guard Performance|Redo Generation Rate (KB/second)
+rac_database|dataguard_sperf_112|Data Guard Performance|Apply Lag (seconds)
+rac_database|dataguard_sperf_112|Data Guard Performance|Apply Lag Data Refresh Time
+rac_database|dataguard_sperf_112|Data Guard Performance|Estimated Failover Time (seconds)    
+rac_database|dataguard_sperf_112|Data Guard Performance|Redo Apply Rate (KB/second)
+rac_database|dataguard_sperf_112|Data Guard Performance|Transport Lag (seconds) 
+rac_database|dataguard_sperf_112|Data Guard Performance|Transport Lag Data Refresh Time 
+rac_database|dataguard_sperf|Data Guard Performance - 11.1 and Prior Database|Apply Lag (seconds) - 11.1 and Prior Database  
+rac_database|dataguard_sperf|Data Guard Performance - 11.1 and Prior Database|Estimated Failover Time (seconds) - 11.1 and Prior Database
+rac_database|dataguard_sperf|Data Guard Performance - 11.1 and Prior Database|Redo Apply Rate (KB/second) - 11.1 and Prior Database  
+rac_database|dataguard_sperf|Data Guard Performance - 11.1 and Prior Database|Transport Lag (seconds) - 11.1 and Prior Database  
+rac_database|dataguard|Data Guard Status|Data Guard Status   
+rac_database|db_service_status|Database Service Status|Database Service Status
+rac_database|db_service_status|Database Service Status|Preferred Instances List 
+rac_database|db_service_status|Database Service Status|Running Instances List
+rac_database|db_service_status|Database Service Status|Service Cardinality 
+rac_database|dbjob_status|Database Job Status|Broken Job Count   
+rac_database|dbjob_status|Database Job Status|Failed Job Count   
+rac_database|ha_flashrecovery|Flash Recovery|Flash Recovery Area 
+rac_database|ha_flashrecovery|Flash Recovery|Flash Recovery Area Size  
+rac_database|ha_flashrecovery|Flash Recovery|Flashback On
+rac_database|ha_flashrecovery|Flash Recovery|Log Mode
+rac_database|ha_flashrecovery|Flash Recovery|Non-reclaimable Flash Recovery Area (%)
+rac_database|ha_flashrecovery|Flash Recovery|Oldest Flashback Time 
+rac_database|ha_flashrecovery|Flash Recovery|Reclaimable Flash Recovery Area (%)
+rac_database|ha_flashrecovery|Flash Recovery|Usable Flash Recovery Area (%)
+rac_database|ha_recovery|Recovery|Corrupt Data Block Count   
+rac_database|ha_recovery|Recovery|Datafiles Need Media Recovery  
+rac_database|ha_recovery|Recovery|Missing Media File Count   
+rac_database|invalid_objects|Invalid Objects by Schema|Owner's Invalid Object Count
+rac_database|observer_11g|Data Guard Fast-Start Failover Observer|Observer Status  
+rac_database|observer|Data Guard Fast-Start Failover Observer - 10.2 Database|Observer Status - 10.2 Database  
+rac_database|problemSegTbsp|Tablespaces With Problem Segments|Segments Approaching Maximum Extents   
+rac_database|problemSegTbsp|Tablespaces With Problem Segments|Segments Not Able to Extend    
+rac_database|problemTbspTemp|Tablespaces Full (Temp)|Tablespace Free Space (MB) (Temp)  
+rac_database|problemTbspTemp|Tablespaces Full (Temp)|Tablespace Space Used (%) (Temp)   
+rac_database|problemTbspUndo|Tablespaces Full (Undo)|Tablespace Free Space (MB) (Undo)  
+rac_database|problemTbspUndo|Tablespaces Full (Undo)|Tablespace Space Used (%) (Undo)   
+rac_database|problemTbsp|Tablespaces Full|Tablespace Free Space (MB)   
+rac_database|problemTbsp|Tablespaces Full|Tablespace Space Used (%)
+rac_database|scn_growth_statistics|SCN Growth Statistics|Current SCN   
+rac_database|scn_growth_statistics|SCN Growth Statistics|Current SCN Compatibility 
+rac_database|scn_growth_statistics|SCN Growth Statistics|Max rate
+rac_database|scn_growth_statistics|SCN Growth Statistics|Maximum SCN Compatibility 
+rac_database|scn_growth_statistics|SCN Growth Statistics|SCN Health
+rac_database|scn_growth_statistics|SCN Growth Statistics|SCN Total Growth Rate (per sec)
+rac_database|scn_max_statistics|SCN Max Statistics|Max SCN Jump Time (GMT) 
+rac_database|scn_max_statistics|SCN Max Statistics|Max SCN Jump in one second (last 24 hours)
+rac_database|segment_advisor_count|Segment Advisor Recommendations|Number of recommendations 
+rac_database|service_performance|Cluster Managed Database Services|% CPU Time Load (in last 5 min)   
+rac_database|service_performance|Cluster Managed Database Services|Average Response Time (msec/call in last 5 min) 
+rac_database|service_performance|Cluster Managed Database Services|Instance with Maximum Response Time   
+rac_database|service_performance|Cluster Managed Database Services|Instance with Minimum Response Time   
+rac_database|service_performance|Cluster Managed Database Services|Maximum Response Time (msec/call, in last 5 min)
+rac_database|service_performance|Cluster Managed Database Services|Minimum Response Time (msec/call, in last 5 min)
+rac_database|service_performance|Cluster Managed Database Services|Running Instances
+rac_database|service_performance|Cluster Managed Database Services|Service Status  
+rac_database|streams_apply_errors|Streams Apply Errors|Error Message   
+rac_database|streams_apply_errors|Streams Apply Errors|Error Number
+rac_database|streams_apply_errors|Streams Apply Errors|Message Count   
+rac_database|streams_latency_throughput|Streams Latency and Throughput|Latency
+rac_database|streams_latency_throughput|Streams Latency and Throughput|Throughput(per sec)   
+rac_database|streams_latency_throughput|Streams Latency and Throughput|Total Messages   
+rac_database|streams_processes_count|Streams Processes Count|Number of Apply Processes  
+rac_database|streams_processes_count|Streams Processes Count|Number of Apply Processes Having Errors 
+rac_database|streams_processes_count|Streams Processes Count|Number of Capture Processes
+rac_database|streams_processes_count|Streams Processes Count|Number of Capture Processes Having Errors   
+rac_database|streams_processes_count|Streams Processes Count|Number of Propagation Jobs 
+rac_database|streams_processes_count|Streams Processes Count|Number of Propagations Having Errors
+rac_database|streams_processes_count|Streams Processes Count|Streams processes count
+rac_database|streams_processes_count|Streams Processes Count|Total Number of Propagation Errors  
+rac_database|streams_processes_status|Streams Processes Status|Streams Process Errors   
+rac_database|streams_processes_status|Streams Processes Status|Streams Process Status   
+rac_database|tbspAllocation|Tablespace Allocation|Tablespace Allocated Space (MB)  
+rac_database|tbspAllocation|Tablespace Allocation|Tablespace Used Space (MB) 
+rac_database|wait_cpu_sess|Active Sessions by CPU and Wait  Classes|Active Sessions
+rac_database|wait_cpu_sess|Active Sessions by CPU and Wait  Classes|End time 
+weblogic_domain|owsm_policy_stats_appcomp_delta|OWSM Policy Application Delta Metrics|OWSM Authentication Policy Successes During the Last Period  
+weblogic_domain|owsm_policy_stats_appcomp_delta|OWSM Policy Application Delta Metrics|OWSM Authentication Policy Violations During the Last Period 
+weblogic_domain|owsm_policy_stats_appcomp_delta|OWSM Policy Application Delta Metrics|OWSM Authorization Policy Successes During the Last Period   
+weblogic_domain|owsm_policy_stats_appcomp_delta|OWSM Policy Application Delta Metrics|OWSM Authorization Policy Violations During the Last Period  
+weblogic_domain|owsm_policy_stats_appcomp_delta|OWSM Policy Application Delta Metrics|OWSM Confidentiality Policy Successes During the Last Period 
+weblogic_domain|owsm_policy_stats_appcomp_delta|OWSM Policy Application Delta Metrics|OWSM Confidentiality Policy Violations During the Last Period
+weblogic_domain|owsm_policy_stats_appcomp_delta|OWSM Policy Application Delta Metrics|OWSM Integrity Policy Successes During the Last Period   
+weblogic_domain|owsm_policy_stats_appcomp_delta|OWSM Policy Application Delta Metrics|OWSM Integrity Policy Violations During the Last Period  
+weblogic_domain|owsm_policy_stats_appcomp_delta|OWSM Policy Application Delta Metrics|OWSM Policy Successes During the Last Period   
+weblogic_domain|owsm_policy_stats_appcomp_delta|OWSM Policy Application Delta Metrics|OWSM Policy Violations During the Last Period  
+weblogic_domain|owsm_policy_stats_appcomp_delta|OWSM Policy Application Delta Metrics|OWSM Policy Violations Ratio During the Last Period
+weblogic_domain|owsm_policy_stats_appcomp_delta|OWSM Policy Application Delta Metrics|OWSM Security Policy Successes During the Last Period
+weblogic_domain|owsm_policy_stats_appcomp_delta|OWSM Policy Application Delta Metrics|OWSM Security Policy Violations During the Last Period   
+weblogic_domain|owsm_policy_stats_appcomp_delta|OWSM Policy Application Delta Metrics|OWSM Security Policy Violations Ratio During the Last Period 
+weblogic_domain|owsm_policy_stats_appcomp_rsctype_delta|OWSM Policy Application and Resource Type Delta Metrics|OWSM Authentication Policy Successes During the Last Period 
+weblogic_domain|owsm_policy_stats_appcomp_rsctype_delta|OWSM Policy Application and Resource Type Delta Metrics|OWSM Authentication Policy Violations During the Last Period
+weblogic_domain|owsm_policy_stats_appcomp_rsctype_delta|OWSM Policy Application and Resource Type Delta Metrics|OWSM Authorization Policy Successes During the Last Period  
+weblogic_domain|owsm_policy_stats_appcomp_rsctype_delta|OWSM Policy Application and Resource Type Delta Metrics|OWSM Authorization Policy Violations During the Last Period 
+weblogic_domain|owsm_policy_stats_appcomp_rsctype_delta|OWSM Policy Application and Resource Type Delta Metrics|OWSM Confidentiality Policy Successes During the Last Period
+weblogic_domain|owsm_policy_stats_appcomp_rsctype_delta|OWSM Policy Application and Resource Type Delta Metrics|OWSM Confidentiality Policy Violations During the Last Period   
+weblogic_domain|owsm_policy_stats_appcomp_rsctype_delta|OWSM Policy Application and Resource Type Delta Metrics|OWSM Integrity Policy Successes During the Last Period  
+weblogic_domain|owsm_policy_stats_appcomp_rsctype_delta|OWSM Policy Application and Resource Type Delta Metrics|OWSM Integrity Policy Violations During the Last Period 
+weblogic_domain|owsm_policy_stats_appcomp_rsctype_delta|OWSM Policy Application and Resource Type Delta Metrics|OWSM Policy Successes During the Last Period  
+weblogic_domain|owsm_policy_stats_appcomp_rsctype_delta|OWSM Policy Application and Resource Type Delta Metrics|OWSM Policy Violations During the Last Period 
+weblogic_domain|owsm_policy_stats_appcomp_rsctype_delta|OWSM Policy Application and Resource Type Delta Metrics|OWSM Policy Violations Ratio During the Last Period
+weblogic_domain|owsm_policy_stats_appcomp_rsctype_delta|OWSM Policy Application and Resource Type Delta Metrics|OWSM Security Policy Successes During the Last Period   
+weblogic_domain|owsm_policy_stats_appcomp_rsctype_delta|OWSM Policy Application and Resource Type Delta Metrics|OWSM Security Policy Violations During the Last Period  
+weblogic_domain|owsm_policy_stats_appcomp_rsctype_delta|OWSM Policy Application and Resource Type Delta Metrics|OWSM Security Policy Violations Ratio During the Last Period
+weblogic_domain|owsm_policy_stats_domain_delta|OWSM Policy Domain Delta Metrics|OWSM Authentication Policy Successes During the Last Period
+weblogic_domain|owsm_policy_stats_domain_delta|OWSM Policy Domain Delta Metrics|OWSM Authentication Policy Violations During the Last Period   
+weblogic_domain|owsm_policy_stats_domain_delta|OWSM Policy Domain Delta Metrics|OWSM Authorization Policy Successes During the Last Period 
+weblogic_domain|owsm_policy_stats_domain_delta|OWSM Policy Domain Delta Metrics|OWSM Authorization Policy Violations During the Last Period
+weblogic_domain|owsm_policy_stats_domain_delta|OWSM Policy Domain Delta Metrics|OWSM Confidentiality Policy Successes During the Last Period   
+weblogic_domain|owsm_policy_stats_domain_delta|OWSM Policy Domain Delta Metrics|OWSM Confidentiality Policy Violations During the Last Period  
+weblogic_domain|owsm_policy_stats_domain_delta|OWSM Policy Domain Delta Metrics|OWSM Integrity Policy Successes During the Last Period   
+weblogic_domain|owsm_policy_stats_domain_delta|OWSM Policy Domain Delta Metrics|OWSM Integrity Policy Violations During the Last Period  
+weblogic_domain|owsm_policy_stats_domain_delta|OWSM Policy Domain Delta Metrics|OWSM Policy Successes During the Last Period 
+weblogic_domain|owsm_policy_stats_domain_delta|OWSM Policy Domain Delta Metrics|OWSM Policy Violations During the Last Period
+weblogic_domain|owsm_policy_stats_domain_delta|OWSM Policy Domain Delta Metrics|OWSM Policy Violations Ratio During the Last Period  
+weblogic_domain|owsm_policy_stats_domain_delta|OWSM Policy Domain Delta Metrics|OWSM Security Policy Successes During the Last Period
+weblogic_domain|owsm_policy_stats_domain_delta|OWSM Policy Domain Delta Metrics|OWSM Security Policy Violations During the Last Period   
+weblogic_domain|owsm_policy_stats_domain_delta|OWSM Policy Domain Delta Metrics|OWSM Security Policy Violations Ratio During the Last Period   
+weblogic_domain|owsm_policy_stats_domain_rsctype_delta|OWSM Policy Domain and Resource Type Delta Metrics|OWSM Authentication Policy Successes During the Last Period   
+weblogic_domain|owsm_policy_stats_domain_rsctype_delta|OWSM Policy Domain and Resource Type Delta Metrics|OWSM Authentication Policy Violations During the Last Period  
+weblogic_domain|owsm_policy_stats_domain_rsctype_delta|OWSM Policy Domain and Resource Type Delta Metrics|OWSM Authorization Policy Successes During the Last Period    
+weblogic_domain|owsm_policy_stats_domain_rsctype_delta|OWSM Policy Domain and Resource Type Delta Metrics|OWSM Authorization Policy Violations During the Last Period   
+weblogic_domain|owsm_policy_stats_domain_rsctype_delta|OWSM Policy Domain and Resource Type Delta Metrics|OWSM Confidentiality Policy Successes During the Last Period  
+weblogic_domain|owsm_policy_stats_domain_rsctype_delta|OWSM Policy Domain and Resource Type Delta Metrics|OWSM Confidentiality Policy Violations During the Last Period 
+weblogic_domain|owsm_policy_stats_domain_rsctype_delta|OWSM Policy Domain and Resource Type Delta Metrics|OWSM Integrity Policy Successes During the Last Period
+weblogic_domain|owsm_policy_stats_domain_rsctype_delta|OWSM Policy Domain and Resource Type Delta Metrics|OWSM Integrity Policy Violations During the Last Period  
+weblogic_domain|owsm_policy_stats_domain_rsctype_delta|OWSM Policy Domain and Resource Type Delta Metrics|OWSM Policy Successes During the Last Period
+weblogic_domain|owsm_policy_stats_domain_rsctype_delta|OWSM Policy Domain and Resource Type Delta Metrics|OWSM Policy Violations During the Last Period   
+weblogic_domain|owsm_policy_stats_domain_rsctype_delta|OWSM Policy Domain and Resource Type Delta Metrics|OWSM Policy Violations Ratio During the Last Period 
+weblogic_domain|owsm_policy_stats_domain_rsctype_delta|OWSM Policy Domain and Resource Type Delta Metrics|OWSM Security Policy Successes During the Last Period 
+weblogic_domain|owsm_policy_stats_domain_rsctype_delta|OWSM Policy Domain and Resource Type Delta Metrics|OWSM Security Policy Violations During the Last Period
+weblogic_domain|owsm_policy_stats_domain_rsctype_delta|OWSM Policy Domain and Resource Type Delta Metrics|OWSM Security Policy Violations Ratio During the Last Period  
+weblogic_domain|owsm_policy_stats_server_delta|OWSM Policy Server Delta Metrics|OWSM Authentication Policy Successes During the Last Period
+weblogic_domain|owsm_policy_stats_server_delta|OWSM Policy Server Delta Metrics|OWSM Authentication Policy Violations During the Last Period   
+weblogic_domain|owsm_policy_stats_server_delta|OWSM Policy Server Delta Metrics|OWSM Authorization Policy Successes During the Last Period 
+weblogic_domain|owsm_policy_stats_server_delta|OWSM Policy Server Delta Metrics|OWSM Authorization Policy Violations During the Last Period
+weblogic_domain|owsm_policy_stats_server_delta|OWSM Policy Server Delta Metrics|OWSM Confidentiality Policy Successes During the Last Period   
+weblogic_domain|owsm_policy_stats_server_delta|OWSM Policy Server Delta Metrics|OWSM Confidentiality Policy Violations During the Last Period  
+weblogic_domain|owsm_policy_stats_server_delta|OWSM Policy Server Delta Metrics|OWSM Integrity Policy Successes During the Last Period   
+weblogic_domain|owsm_policy_stats_server_delta|OWSM Policy Server Delta Metrics|OWSM Integrity Policy Violations During the Last Period  
+weblogic_domain|owsm_policy_stats_server_delta|OWSM Policy Server Delta Metrics|OWSM Policy Successes During the Last Period 
+weblogic_domain|owsm_policy_stats_server_delta|OWSM Policy Server Delta Metrics|OWSM Policy Violations During the Last Period
+weblogic_domain|owsm_policy_stats_server_delta|OWSM Policy Server Delta Metrics|OWSM Policy Violations Ratio During the Last Period  
+weblogic_domain|owsm_policy_stats_server_delta|OWSM Policy Server Delta Metrics|OWSM Security Policy Successes During the Last Period
+weblogic_domain|owsm_policy_stats_server_delta|OWSM Policy Server Delta Metrics|OWSM Security Policy Violations During the Last Period   
+weblogic_domain|owsm_policy_stats_server_delta|OWSM Policy Server Delta Metrics|OWSM Security Policy Violations Ratio During the Last Period   
+weblogic_domain|owsm_policy_stats_server_rsctype_delta|OWSM Policy Server and Resource Type Delta Metrics|OWSM Authentication Policy Successes During the Last Period   
+weblogic_domain|owsm_policy_stats_server_rsctype_delta|OWSM Policy Server and Resource Type Delta Metrics|OWSM Authentication Policy Violations During the Last Period  
+weblogic_domain|owsm_policy_stats_server_rsctype_delta|OWSM Policy Server and Resource Type Delta Metrics|OWSM Authorization Policy Successes During the Last Period    
+weblogic_domain|owsm_policy_stats_server_rsctype_delta|OWSM Policy Server and Resource Type Delta Metrics|OWSM Authorization Policy Violations During the Last Period   
+weblogic_domain|owsm_policy_stats_server_rsctype_delta|OWSM Policy Server and Resource Type Delta Metrics|OWSM Confidentiality Policy Successes During the Last Period  
+weblogic_domain|owsm_policy_stats_server_rsctype_delta|OWSM Policy Server and Resource Type Delta Metrics|OWSM Confidentiality Policy Violations During the Last Period 
+weblogic_domain|owsm_policy_stats_server_rsctype_delta|OWSM Policy Server and Resource Type Delta Metrics|OWSM Integrity Policy Successes During the Last Period
+weblogic_domain|owsm_policy_stats_server_rsctype_delta|OWSM Policy Server and Resource Type Delta Metrics|OWSM Integrity Policy Violations During the Last Period  
+weblogic_domain|owsm_policy_stats_server_rsctype_delta|OWSM Policy Server and Resource Type Delta Metrics|OWSM Policy Successes During the Last Period
+weblogic_domain|owsm_policy_stats_server_rsctype_delta|OWSM Policy Server and Resource Type Delta Metrics|OWSM Policy Violations During the Last Period   
+weblogic_domain|owsm_policy_stats_server_rsctype_delta|OWSM Policy Server and Resource Type Delta Metrics|OWSM Policy Violations Ratio During the Last Period 
+weblogic_domain|owsm_policy_stats_server_rsctype_delta|OWSM Policy Server and Resource Type Delta Metrics|OWSM Security Policy Successes During the Last Period 
+weblogic_domain|owsm_policy_stats_server_rsctype_delta|OWSM Policy Server and Resource Type Delta Metrics|OWSM Security Policy Violations During the Last Period
+weblogic_domain|owsm_policy_stats_server_rsctype_delta|OWSM Policy Server and Resource Type Delta Metrics|OWSM Security Policy Violations Ratio During the Last Period  
+weblogic_j2eeserver|Response|Response|Status
+weblogic_j2eeserver|ServerRuntime|Server Runtime Metrics|Listen Port   
+weblogic_j2eeserver|alertLogAdrIncident|Incident|Alert Log   
+weblogic_j2eeserver|alertLogAdrIncident|Incident|ECID
+weblogic_j2eeserver|alertLogAdrIncident|Incident|Error Category  
+weblogic_j2eeserver|alertLogAdrIncident|Incident|Impact  
+weblogic_j2eeserver|alertLogAdrIncident|Incident|Incident
+weblogic_j2eeserver|alertLogAdrIncident|Incident|Incident ID 
+weblogic_j2eeserver|alertLogAdrIncident|Incident|Last Caused By  
+weblogic_j2eeserver|alertLogAdrIncident|Incident|Problem Key 
+weblogic_j2eeserver|alertLogAdrIncident|Incident|Trace File  
+weblogic_j2eeserver|alertLogAdrIncident|Incident|URI 
+weblogic_j2eeserver|alertLogAdrIncident|Incident|User ID 
+weblogic_j2eeserver|datasource_state|Datasource State Metric|State 
+weblogic_j2eeserver|datasource|Datasource Metrics|Available Connections
+weblogic_j2eeserver|datasource|Datasource Metrics|Cached Statements Used (%) 
+weblogic_j2eeserver|datasource|Datasource Metrics|Cached Statements Used (per minute)   
+weblogic_j2eeserver|datasource|Datasource Metrics|Cached Statements not Used (per minute)    
+weblogic_j2eeserver|datasource|Datasource Metrics|Connection Creation Time (ms) 
+weblogic_j2eeserver|datasource|Datasource Metrics|Connection Leaks (per minute) 
+weblogic_j2eeserver|datasource|Datasource Metrics|Connection Pool Size 
+weblogic_j2eeserver|datasource|Datasource Metrics|Connection Refresh Failures (per minute)   
+weblogic_j2eeserver|datasource|Datasource Metrics|Connection Request Failures (per minute)   
+weblogic_j2eeserver|datasource|Datasource Metrics|Connection Requests (per minute) 
+weblogic_j2eeserver|datasource|Datasource Metrics|Connection Requests Waiting
+weblogic_j2eeserver|datasource|Datasource Metrics|Connection Requests that Waited (%)   
+weblogic_j2eeserver|datasource|Datasource Metrics|Connection Requests that Waited (per minute)   
+weblogic_j2eeserver|datasource|Datasource Metrics|Connection Wait Successes (%) 
+weblogic_j2eeserver|datasource|Datasource Metrics|Connection Wait Successes (per minute)
+weblogic_j2eeserver|datasource|Datasource Metrics|Connections Created (per minute) 
+weblogic_j2eeserver|datasource|Datasource Metrics|Connections in Use   
+weblogic_j2eeserver|datasource|Datasource Metrics|Failed Waiting Connection Requests (per minute)
+weblogic_j2eeserver|datasource|Datasource Metrics|Statement Cache Size 
+weblogic_j2eeserver|datasource|Datasource Metrics|Statements Added to Cache (per minute)
+weblogic_j2eeserver|datasource|Datasource Metrics|Statements Discarded from Cache (per minute)   
+weblogic_j2eeserver|datasource|Datasource Metrics|Successful Connections (%) 
+weblogic_j2eeserver|datasource|Datasource Metrics|Unavailable Connections  
+weblogic_j2eeserver|jms|JMS Metrics|JMS Connections  
+weblogic_j2eeserver|jms|JMS Metrics|JMS Servers 
+weblogic_j2eeserver|jta|JTA Metrics|Abandoned Transactions (per minute)
+weblogic_j2eeserver|jta|JTA Metrics|Active JTA Transactions  
+weblogic_j2eeserver|jta|JTA Metrics|Committed JTA Transactions (per minute)
+weblogic_j2eeserver|jta|JTA Metrics|Committed Transaction Time (seconds)   
+weblogic_j2eeserver|jta|JTA Metrics|Committed Transactions (%)   
+weblogic_j2eeserver|jta|JTA Metrics|Heuristic Transactions (per minute)
+weblogic_j2eeserver|jta|JTA Metrics|JTA Transaction Rollbacks (per minute) 
+weblogic_j2eeserver|jta|JTA Metrics|Transaction Rollbacks due to Application Error (per minute)  
+weblogic_j2eeserver|jta|JTA Metrics|Transaction Rollbacks due to Resource Error (per minute) 
+weblogic_j2eeserver|jta|JTA Metrics|Transaction Rollbacks due to System Error (per minute)   
+weblogic_j2eeserver|jta|JTA Metrics|Transaction Rollbacks due to Timeout (per minute)   
+weblogic_j2eeserver|jta|JTA Metrics|Transactions Processed (per minute)
+weblogic_j2eeserver|jvm_class_loading|JVM Class Loading|JVM Class Loading - Classes Currently Loaded 
+weblogic_j2eeserver|jvm_garbage_collectors|JVM Garbage Collectors|Garbage Collector - Execution Time (since startup) (ms)    
+weblogic_j2eeserver|jvm_garbage_collectors|JVM Garbage Collectors|Garbage Collector - Garbage Collection Invocations (since startu   
+weblogic_j2eeserver|jvm_garbage_collectors|JVM Garbage Collectors|Garbage Collector - Invocation Time (ms) 
+weblogic_j2eeserver|jvm_garbage_collectors|JVM Garbage Collectors|Garbage Collector - Invocations (per min)
+weblogic_j2eeserver|jvm_garbage_collectors|JVM Garbage Collectors|Garbage Collector - Old Heap Percent Free after GC (%)
+weblogic_j2eeserver|jvm_garbage_collectors|JVM Garbage Collectors|Garbage Collector - Old Heap size after GC (MB)  
+weblogic_j2eeserver|jvm_garbage_collectors|JVM Garbage Collectors|Garbage Collector - Percent Time spent (elapsed) 
+weblogic_j2eeserver|jvm_memory_pools|JVM Memory Pools|Memory Pool - Current Usage (MB)  
+weblogic_j2eeserver|jvm_memory_pools|JVM Memory Pools|Memory Pool - Peak Usage (KB)
+weblogic_j2eeserver|jvm_memory_pools|JVM Memory Pools|Type   
+weblogic_j2eeserver|jvm_memory_usage|JVM Memory Usage|JVM Memory - Heap Memory Usage (KB)    
+weblogic_j2eeserver|jvm_memory_usage|JVM Memory Usage|JVM Memory - Non-Heap Memory Usage (KB)
+weblogic_j2eeserver|jvm_memory_usage|JVM Memory Usage|JVM Memory - Objects Pending Finalization  
+weblogic_j2eeserver|jvm_runtime|JVM Runtime Metrics|JVM Runtime - Up Time (ms)
+weblogic_j2eeserver|jvm_runtime|JVM Runtime Metrics|JVM Runtime - VM Name  
+weblogic_j2eeserver|jvm_runtime|JVM Runtime Metrics|JVM Runtime - VM Version 
+weblogic_j2eeserver|jvm_threads|JVM Threads|JVM Threads - Active Daemon Threads 
+weblogic_j2eeserver|jvm_threads|JVM Threads|JVM Threads - Active Threads   
+weblogic_j2eeserver|jvm_threads|JVM Threads|JVM Threads - Deadlocked Threads 
+weblogic_j2eeserver|jvm_threads|JVM Threads|JVM Threads - Peak Threads 
+weblogic_j2eeserver|jvm_threads|JVM Threads|JVM Threads - Threads Started (since startup)    
+weblogic_j2eeserver|jvm|JVM Metrics|Active Daemon Threads
+weblogic_j2eeserver|jvm|JVM Metrics|Active Threads   
+weblogic_j2eeserver|jvm|JVM Metrics|CPU Usage (%)    
+weblogic_j2eeserver|jvm|JVM Metrics|Free Heap (MB)   
+weblogic_j2eeserver|jvm|JVM Metrics|Heap Usage (%)   
+weblogic_j2eeserver|jvm|JVM Metrics|Heap Usage (MB)  
+weblogic_j2eeserver|jvm|JVM Metrics|JDK Vendor  
+weblogic_j2eeserver|jvm|JVM Metrics|JDK Version 
+weblogic_j2eeserver|jvm|JVM Metrics|Nursery Size (MB)
+weblogic_j2eeserver|server_1|Limited Server Metrics|Active Sockets 
+weblogic_j2eeserver|server_datasource|Server Datasource Metrics|Available Connections   
+weblogic_j2eeserver|server_datasource|Server Datasource Metrics|Cached Statements Used (%)   
+weblogic_j2eeserver|server_datasource|Server Datasource Metrics|Cached Statements Used (per minute)  
+weblogic_j2eeserver|server_datasource|Server Datasource Metrics|Cached Statements not Used (per minute)  
+weblogic_j2eeserver|server_datasource|Server Datasource Metrics|Connection Pool Size
+weblogic_j2eeserver|server_datasource|Server Datasource Metrics|Connection Requests (per minute) 
+weblogic_j2eeserver|server_datasource|Server Datasource Metrics|Connection Requests Waiting  
+weblogic_j2eeserver|server_datasource|Server Datasource Metrics|Connection Requests that Waited (%)  
+weblogic_j2eeserver|server_datasource|Server Datasource Metrics|Connection Requests that Waited (per minute)   
+weblogic_j2eeserver|server_datasource|Server Datasource Metrics|Connection Wait Successes (%)
+weblogic_j2eeserver|server_datasource|Server Datasource Metrics|Connection Wait Successes (per minute)   
+weblogic_j2eeserver|server_datasource|Server Datasource Metrics|JDBC Connection Creates (per minute) 
+weblogic_j2eeserver|server_datasource|Server Datasource Metrics|Open JDBC Connections   
+weblogic_j2eeserver|server_datasource|Server Datasource Metrics|Statement Cache Size
+weblogic_j2eeserver|server_datasource|Server Datasource Metrics|Statements Added to Cache (per minute)   
+weblogic_j2eeserver|server_datasource|Server Datasource Metrics|Successful Connections (%)   
+weblogic_j2eeserver|server_ejb_cache|EJB Cache Metrics By Server|Bean Activations (per minute)   
+weblogic_j2eeserver|server_ejb_cache|EJB Cache Metrics By Server|Cache Accesses (per minute) 
+weblogic_j2eeserver|server_ejb_cache|EJB Cache Metrics By Server|Cache Hits (%) 
+weblogic_j2eeserver|server_ejb_cache|EJB Cache Metrics By Server|Cache Misses (per minute)   
+weblogic_j2eeserver|server_ejb_cache|EJB Cache Metrics By Server|Cache Passivations (per minute) 
+weblogic_j2eeserver|server_ejb_cache|EJB Cache Metrics By Server|Cached Beans
+weblogic_j2eeserver|server_ejb_pool|EJB Pool Metrics By Server|Bean Access Failures (per minute) 
+weblogic_j2eeserver|server_ejb_pool|EJB Pool Metrics By Server|Bean Accesses (per minute)    
+weblogic_j2eeserver|server_ejb_pool|EJB Pool Metrics By Server|Bean Destroys (per minute)    
+weblogic_j2eeserver|server_ejb_pool|EJB Pool Metrics By Server|Bean Successes (%)  
+weblogic_j2eeserver|server_ejb_pool|EJB Pool Metrics By Server|Beans in Use
+weblogic_j2eeserver|server_ejb_pool|EJB Pool Metrics By Server|Free Bean Instances 
+weblogic_j2eeserver|server_ejb_transaction|EJB Transaction Metrics By Server|Bean Transaction Commits (%)
+weblogic_j2eeserver|server_ejb_transaction|EJB Transaction Metrics By Server|Bean Transaction Commits (per minute) 
+weblogic_j2eeserver|server_ejb_transaction|EJB Transaction Metrics By Server|Bean Transaction Rollbacks (per minute) 
+weblogic_j2eeserver|server_ejb_transaction|EJB Transaction Metrics By Server|Bean Transaction Timeouts (per minute)
+weblogic_j2eeserver|server_jms_server|JMS Server Metrics By Server|Bytes Pageable  
+weblogic_j2eeserver|server_jms_server|JMS Server Metrics By Server|Bytes Paged In (per minute)   
+weblogic_j2eeserver|server_jms_server|JMS Server Metrics By Server|Bytes Paged Out (per minute)  
+weblogic_j2eeserver|server_jms_server|JMS Server Metrics By Server|Bytes Pending
+weblogic_j2eeserver|server_jms_server|JMS Server Metrics By Server|Bytes Received (per minute)   
+weblogic_j2eeserver|server_jms_server|JMS Server Metrics By Server|Bytes Stored 
+weblogic_j2eeserver|server_jms_server|JMS Server Metrics By Server|Current JMS Messages 
+weblogic_j2eeserver|server_jms_server|JMS Server Metrics By Server|Destinations 
+weblogic_j2eeserver|server_jms_server|JMS Server Metrics By Server|Messages Paged In (per minute)
+weblogic_j2eeserver|server_jms_server|JMS Server Metrics By Server|Messages Paged Out (per minute)   
+weblogic_j2eeserver|server_jms_server|JMS Server Metrics By Server|Messages Received (per minute)
+weblogic_j2eeserver|server_jms_server|JMS Server Metrics By Server|Pending JMS Messages 
+weblogic_j2eeserver|server_jms_server|JMS Server Metrics By Server|Session Pools
+weblogic_j2eeserver|server_level_work_manager|Server Level Work Manager Metrics|Work Manager Pending Requests  
+weblogic_j2eeserver|server_level_work_manager|Server Level Work Manager Metrics|Work Manager Requests (per minute) 
+weblogic_j2eeserver|server_level_work_manager|Server Level Work Manager Metrics|Work Manager Stuck Threads 
+weblogic_j2eeserver|server_mdb|Message Driven EJB Metrics By Server|MDB Messages (per minute)
+weblogic_j2eeserver|server_mdb|Message Driven EJB Metrics By Server|MDB Suspensions (per minute) 
+weblogic_j2eeserver|server_module|Module Metrics By Server|Active Sessions 
+weblogic_j2eeserver|server_servlet_jsp|Server Servlet/JSP Metrics|Reloads (per minute)  
+weblogic_j2eeserver|server_servlet_jsp|Server Servlet/JSP Metrics|Request Processing Time (ms)   
+weblogic_j2eeserver|server_servlet_jsp|Server Servlet/JSP Metrics|Requests (per minute) 
+weblogic_j2eeserver|server_state|Server State Metrics|Server State 
+weblogic_j2eeserver|server_work_manager|Server Work Manager Metrics|Work Manager Pending Requests
+weblogic_j2eeserver|server_work_manager|Server Work Manager Metrics|Work Manager Requests (per minute)   
+weblogic_j2eeserver|server_work_manager|Server Work Manager Metrics|Work Manager Stuck Threads   
+weblogic_j2eeserver|server|Server Metrics|Listen Port
+weblogic_j2eeserver|server|Server Metrics|Listen Port Enabled
+weblogic_j2eeserver|server|Server Metrics|SSL Listen Port
+weblogic_j2eeserver|server|Server Metrics|SSL Listen Port Enabled
+weblogic_j2eeserver|server|Server Metrics|Start Time 
+weblogic_j2eeserver|server|Server Metrics|State 
+
+1532 rows selected.
+
+SQL> 
+SQL> spool off

@@ -17,7 +17,5 @@ spool list_busy_clusters.tsv
        and a.target_name = b.member_target_name
   order by 1;
   
--- NOTE: To list only the cluster name, do a subquery and distinct of composite_target_type from that subquery
-
 spool off
 

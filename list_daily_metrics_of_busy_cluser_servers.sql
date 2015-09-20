@@ -27,9 +27,9 @@ mgmt$metric_daily a,
 mgmt_target_memberships b
 where
 a.target_type='host'
-and a.rollup_timestamp >= sysdate-7
+and a.rollup_timestamp >= sysdate-16
 and a.metric_name='Load'
-and a.metric_column in ('cpuUtil')
+--and a.metric_column in ('cpuUtil')
 --
 and a.target_name = b.member_target_name
 and b.composite_target_name in
@@ -48,5 +48,4 @@ and b.composite_target_name in
 order by 1;
 
 spool off
-
 

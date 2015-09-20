@@ -15,7 +15,7 @@ spool list_busy_clusters.tsv
        and a.rollup_timestamp >= sysdate-7
        and a.maximum > 40
        and a.target_name = b.member_target_name
-  order by 3,1,2;
+  order by 1;
   
 -- NOTE: To list only the cluster name, do a subquery and distinct of composite_target_type from that subquery
 

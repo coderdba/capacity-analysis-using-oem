@@ -3,14 +3,15 @@ spool list_daily_metrics_of_busy_cluser_servers.tsv
 set pages 1000
 set lines 120
 
+prompt composite_target_name, target_name, metric_name, metric_column, date, average, min, max, std_deviation
 select
+b.composite_target_name
+|| '|' ||
 a.target_name
 || '|' ||
 a.metric_name
 || '|' ||
 a.metric_column
-|| '|' ||
-a.metric_label
 || '|' ||
 a.rollup_timestamp
 || '|' ||
@@ -47,3 +48,5 @@ and b.composite_target_name in
 order by 1;
 
 spool off
+
+

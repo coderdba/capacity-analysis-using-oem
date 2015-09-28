@@ -1,3 +1,5 @@
+https://docs.oracle.com/cd/E24628_01/em.121/e25160/asm_cluster.htm#EMDBM10000
+
 https://twiki.cern.ch/twiki/bin/viewfile/PSSGroup/HAandPerf?rev=1.4&filename=ASM_metadata_30012006.html
 V$ASM_DISK based on X$KFDSK, X$KFKID perform disk discovery and lists disks + usage metrics
 V$ASM_DISK_STAT based on X$KFDSK_STAT, X$KFKID List disks + usage metrics

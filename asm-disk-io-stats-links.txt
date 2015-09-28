@@ -1,0 +1,9 @@
+https://twiki.cern.ch/twiki/bin/viewfile/PSSGroup/HAandPerf?rev=1.4&filename=ASM_metadata_30012006.html
+V$ASM_DISK based on X$KFDSK, X$KFKID perform disk discovery and lists disks + usage metrics
+V$ASM_DISK_STAT based on X$KFDSK_STAT, X$KFKID List disks + usage metrics
+
+http://www.nyoug.org/Presentations/2011/March/Iotzov_OEM_Repository.pdf
+
+osm_cluster is the target_type for ASM stuff - look in the metric-types list
+(http://cloudcontrol12c.blogspot.in/2013/06/em12c-asm-storage-report.html)
+(http://grokbase.com/t/freelists.org/oracle-l/13cb2h0v6p/asm-diskgroup-information)

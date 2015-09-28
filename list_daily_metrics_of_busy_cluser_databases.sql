@@ -1,21 +1,33 @@
-spool list_daily_metrics_of_busy_cluser_databases2.tsv
+spool list_daily_metrics_of_busy_cluser_databases.tsv
+
+-- NOTE: Extract all key_value columns also as they have finer metric attributes
 
 set pages 1000
-set lines 150
+set lines 280
 
-prompt composite_target_name, host_name, target_name, metric_name, metric_column, date, average, min, max, std_deviation
+prompt composite_target_name, target_name, metric_name, metric_column, date, average, min, max, std_deviation
 select
-upper(b.composite_target_name)
+b.composite_target_name
 || '|' ||
-upper(c.host_name)
+c.host_name
 || '|' ||
-upper(a.target_name)
+a.target_name
 || '|' ||
 a.metric_name
 || '|' ||
 a.metric_column
 || '|' ||
 a.rollup_timestamp
+|| '|' ||
+a.key_value
+|| '|' ||
+a.key_value2
+|| '|' ||
+a.key_value3
+|| '|' ||
+a.key_value4
+|| '|' ||
+a.key_value5
 || '|' ||
 round(a.average)
 || '|' ||

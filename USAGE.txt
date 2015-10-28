@@ -19,3 +19,6 @@ Identify busy clusters and their 'busy' component servers: (includes only busy s
 
 Obtain daily metrics of all servers for busy clusters for the last few days (change number of days)
 > list_daily_metrics_of_busy_cluser_servers.sql 
+
+Obtain daily metrics of all databases on these busy clusters
+> list_daily_metrics_of_busy_cluser_databases.sql

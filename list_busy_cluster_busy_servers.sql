@@ -9,7 +9,7 @@ alter session set current_schema=sysman;
 spool list_busy_cluster_servers.tsv
 
     select distinct b.composite_target_type || '|' ||  b.composite_target_name || '|' || 
-           b.member_target_type || '|' ||  a.target_name || '|' || a.maximum
+           b.member_target_type || '|' ||  a.target_name || '|' || round(a.maximum)
       from mgmt$metric_hourly a,
            mgmt_target_memberships b
      where b.composite_target_type = 'cluster'

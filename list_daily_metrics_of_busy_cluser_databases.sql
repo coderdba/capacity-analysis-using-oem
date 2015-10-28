@@ -43,7 +43,7 @@ mgmt_target_memberships b,
 mgmt$target c
 where
 a.target_type='oracle_database'
-and a.rollup_timestamp = trunc(sysdate-16)
+and a.rollup_timestamp >= trunc(sysdate-16)
 and c.target_name = a.target_name
 and c.target_type = a.target_type
 and b.member_target_name = c.host_name

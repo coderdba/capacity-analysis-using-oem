@@ -1,11 +1,12 @@
 spool list_daily_metrics_of_busy_cluser_databases.tsv
 
--- NOTE: Extract all key_value columns also as they have finer metric attributes
-
 set pages 1000
 set lines 280
 
-prompt composite_target_name, target_name, metric_name, metric_column, date, average, min, max, std_deviation
+-- Database metrics of all servers of clusters with at least one node
+-- of the cluster busy in CPU in the last few days
+
+prompt composite_target_name, host_name, DB_target_name, metric_name, metric_column, date, key1, key2, key3, key4, key5, average, min, max, std_deviation
 select
 b.composite_target_name
 || '|' ||
@@ -62,3 +63,4 @@ and b.composite_target_name in
 order by 1;
 
 spool off
+

@@ -1,14 +1,13 @@
-spool list_daily_metrics_of_busy_cluser_asm_duplicates.tsv
-
--- NOTE: Extract all key_value columns as they have finer metric attributes
+spool list_daily_metrics_of_busy_cluser_asm.tsv
 
 set pages 1000
 set lines 280
 
--- select TARGET_NAME, TARGET_TYPE, METRIC_NAME, METRIC_COLUMN, to_char(COLLECTION_TIMESTAMP, 'DD-MON-YYYY HH24:MI'), value, KEY_VALUE, KEY_VALUE2, KEY_VALUE3,
--- KEY_VALUE4, KEY_VALUE5 from mgmt$metric_current where target_name = '+ASM_rclp16'
+-- ASM metrics of all servers of clusters with at least one node
+-- of the cluster busy in CPU in the last few days
 
 prompt composite_target_name, target_name, metric_name, metric_column, date, key1, key2, key3, key4, key5, average, min, max, std_deviation
+
 select
 b.composite_target_name
 || '|' ||

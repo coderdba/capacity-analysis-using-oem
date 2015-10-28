@@ -9,46 +9,49 @@ set lines 280
 prompt composite_target_name, target_name, metric_name, metric_column, date, key1, key2, key3, key4, key5, average, min, max, std_deviation
 
 select
-b.composite_target_name
+a.composite_target_name
 || '|' ||
-c.host_name
+b.host_name
 || '|' ||
-a.target_name
+c.target_name
 || '|' ||
-a.metric_name
+c.metric_name
 || '|' ||
-a.metric_column
+c.metric_column
 || '|' ||
-a.rollup_timestamp
+c.rollup_timestamp
 || '|' ||
-a.key_value
+c.key_value
 || '|' ||
-a.key_value2
+c.key_value2
 || '|' ||
-a.key_value3
+c.key_value3
 || '|' ||
-a.key_value4
+c.key_value4
 || '|' ||
-a.key_value5
+c.key_value5
 || '|' ||
-round(a.average)
+round(c.average)
 || '|' ||
-round(a.minimum)
+round(c.minimum)
 || '|' ||
-round(a.maximum)
+round(c.maximum)
 || '|' ||
-round(a.standard_deviation)
+round(c.standard_deviation)
 from
-mgmt$metric_daily a,
-mgmt_target_memberships b,
-mgmt$target c
+mgmt_target_memberships a,
+mgmt$target b,
+mgmt$metric_daily c
 where
-a.target_type='osm_cluster'
-and a.rollup_timestamp = trunc(sysdate-16)
-and c.target_name = a.target_name
-and c.target_type = a.target_type
-and b.member_target_name = c.host_name
-and b.composite_target_name in
+    a.member_target_type = 'host'
+and b.target_type = 'osm_cluster'
+and b.host_name = a.member_target_name
+and c.target_type = b.target_type
+and c.target_name = b.target_name
+and c.rollup_timestamp >= trunc(sysdate-16)
+--
+--and a.composite_target_name in ('rclp09')
+and a.composite_target_name in
 (
     select distinct  b.composite_target_name
       from mgmt$metric_hourly a,
@@ -64,3 +67,4 @@ and b.composite_target_name in
 order by 1;
 
 spool off
+

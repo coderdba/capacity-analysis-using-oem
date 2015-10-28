@@ -1,0 +1,21 @@
+USING THESE CAPACITY ANALYSIS SCRIPTS
+===================================================
+
+----
+NOTE
+----
+Ensure the criteria for 'busy' is same in all these sql's
+Ensure the 'number of days' of daily metrics are same in all daily sqls
+Ensure the 'number of days' of hourly metrics are same in all hourly sqls
+
+-----
+STEPS
+-----
+Identify busy clusters and all their component servers: (includes busy and not busy servers of the cluster)
+> list_busy_cluster_all_servers.sql 
+
+Identify busy clusters and their 'busy' component servers: (includes only busy servers of the cluster)
+> list_busy_cluster_busy_servers.sql
+
+Obtain daily metrics of all servers for busy clusters for the last few days (change number of days)
+> list_daily_metrics_of_busy_cluser_servers.sql 

@@ -8,8 +8,8 @@ alter session set current_schema=sysman;
 
 spool list_busy_cluster_servers.tsv
 
-    select distinct b.composite_target_type || '|' ||  b.composite_target_name || '|' || 
-           b.member_target_type || '|' ||  a.target_name || '|' || round(a.maximum)
+    select distinct b.composite_target_type || '|' ||  b.composite_target_name || '|' ||
+           b.member_target_type || '|' ||  a.target_name || '|busy_server_in_cluster'
       from mgmt$metric_hourly a,
            mgmt_target_memberships b
      where b.composite_target_type = 'cluster'
@@ -21,6 +21,7 @@ spool list_busy_cluster_servers.tsv
        and a.maximum > 40
        and a.target_name = b.member_target_name
   order by 1;
+
 
 spool off
 

@@ -136,7 +136,6 @@ host|ME$PERM_CHECK|ME$PERM_CHECK|GROUP
 host|ME$PERM_CHECK|ME$PERM_CHECK|OWNER
 host|ME$PERM_CHECK|ME$PERM_CHECK|PERMISSION
 host|ME$PMON|ME$pmon|Host_Name
-host|ME$Testing_GG_Lag_OEMGenericScript_gowrish_deployable|GG Lag - Generic Single Script Gowrish Testing |Lag Seconds  
 host|ME$check_Cron_Setup|ME$check_Cron_Setup|Script_Name 
 host|ME$check_pmon|ME$check_pmon|Host_Name 
 host|NetworkSummary|Network Interfaces Summary|All Network Interfaces Combined Utilization (%)   
